@@ -1,0 +1,54 @@
+#ifndef _MACROS_H_
+#define _MACROS_H_
+
+// COIN FLIP
+//MINIGAME
+#define TTT_COIN_CHOICE 0x1C0
+#define TTT_COIN_CHOICE_HEADS 0x1C1
+#define TTT_COIN_CHOICE_TAILS 0x1C2
+#define TTT_COIN_RESULT 0x1C3
+#define TTT_COIN_RESULT_SUCCESS 0x1C4
+#define TTT_COIN_RESULT_FAIL 0x1C5
+
+// GAME RESULTS
+#define TTT_WIN_X 0x1A0 // X wins GAME
+#define TTT_WIN_O 0x1A1 // O wins GAME
+#define TTT_GAMEOVER 0x1F0; // Game is Finished
+
+// GAME OVER STATES
+#define TTT_GAMEOVER_FALSE 0x1F1 // GAMEOVER = 0
+#define TTT_GAMEOVER_TRUE 0x1F2 // GAMEOVER = 1
+#define TTT_GAMEOVER_WIN 0x1F3 // Game has been won/completed
+#define TTT_GAMEOVER_DRAW 0x1F4 // Game is a draw
+#define TTT_GAMEOVER_QUIT 0x15 // Game was interrupted/ended before players finished
+
+// GAME MENU
+//DISPLAY
+#define TTT_DISPLAY_MENU 0x2A0 // Display a menu
+//MAIN
+#define TTT_MENU_MAIN 0x2A1 // Main Menu
+#define TTT_MENU_MAIN_PLAY 0x2A2 // Selection PLAY
+#define TTT_MENU_MAIN_OPTIONS 0x2A3 // 
+#define TTT_MENU_MAIN_HELP 0x2A4
+#define TTT_MENU_MAIN_QUIT 0x2A5
+//PLAY
+#define TTT_MENU_PLAY 0x2A6
+#define TTT_MENU_PLAY_HUMAN 0x2A7
+#define TTT_MENU_PLAY_COMPUTER 0x2A8
+#define TTT_MENU_PLAY_BACK 0x2A9
+//OPTIONS
+#define TTT_MENU_OPTIONS 0x2AA
+#define TTT_MENU_OPTIONS_DIFFICULTY 0x2AB
+#define TTT_MENU_OPTIONS_COIN 0x2AC
+#define TTT_MENU_OPTIONS_BACK 0x2AD
+//HELP
+#define TTT_MENU_HELP 0x2AE
+#define TTT_MENU_HELP_HOWTOPLAY 0x2AF
+#define TTT_MENU_HELP_BACK 0x2B0
+//QUIT
+#define TTT_MENU_QUIT 0x2B1
+#define TTT_MENU_QUIT_MESSAGE 0x2B2
+#define TTT_MENU_QUIT_YES 0x2B3
+#define TTT_MENU_QUIT_BACK 0x2B4
+
+#endif // _MACROS_H_ //

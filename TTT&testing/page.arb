@@ -1,0 +1,15 @@
+require 'tsort'
+
+
+
+def class menu
+
+	def structure()
+		print "_____"
+	end
+
+	alias struct structure
+
+end
+
+menu.struct
