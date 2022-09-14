@@ -164,7 +164,7 @@ void HANGMAN::getInput() {
     std::cout << "Guess a letter: ";
     std::cin.clear();
     std::cin >> letter;
-    if (letter == '1' || letter == '2' || letter == '3' || letter == '4' || letter == '5' || letter == '6' || letter == '7' || letter == '8' || letter == '9' || letter == '0') {
+    if (letter == '1' || letter == '2' || letter == '3' || letter == '4' || letter == '5' || letter == '6' || letter == '7' || letter == '8' || letter == '9' || letter == '0' || letter == '!' || letter =='?' || letter == '+' || letter == '-' || letter == '_' || letter == '#' || letter == '&' || letter == '*' || letter == '=' || letter == '.' || letter == ',' || letter == '\'' || letter == '"' || letter == '(' || letter == ')') {
         std::cout << "Invalid input" << std::endl;
         Sleep::seconds(1);
         system("clear");

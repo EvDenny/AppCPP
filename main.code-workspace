@@ -8,6 +8,12 @@
 		}
 	],
 	"settings": {
+		"markdown.extension.syntax.decorations": true,
+		"markdown.extension.preview.autoShowPreviewToSide": true,
+		"markdown.preview.typographer": true,
+		"markdown-checkboxes.label": true,
+		"markdown-checkboxes.enable": true,
+		"markdown-mermaid.lightModeTheme": "base",
 		"files.associations": {
 			"chrono": "cpp",
 			"ostream": "cpp",

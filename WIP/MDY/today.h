@@ -25,7 +25,7 @@ public:
 } today;
 
 class Input {
-public:    
+public:
     int mm;
     int dd;
     int yyyy;
