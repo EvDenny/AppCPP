@@ -8,6 +8,16 @@
 		}
 	],
 	"settings": {
+		"[python]": {
+			"editor.wordBasedSuggestions": true,
+			"editor.autoIndent": "advanced",
+			"editor.colorDecorators": true,
+			"editor.hover.enabled": true,
+			"editor.tabCompletion": "onlySnippets"
+		},
+		"markdown.styles": [
+			"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		],
 		"markdown.extension.syntax.decorations": true,
 		"markdown.extension.preview.autoShowPreviewToSide": true,
 		"markdown.preview.typographer": true,

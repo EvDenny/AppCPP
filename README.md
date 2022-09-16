@@ -1,42 +1,55 @@
-# $\textcolor{#4a49af}{\tt APPLICATION}$
-![picture](images/29709c44a810964a114fc808885eb9c29f5550931cde77b42bb9d7f86b6f8f93.png){:height="40px" width="3px"}
+# ![picture](images/cpp.sprite.png) $\textcolor{#4a49af}{\tt ^{APPLICATION}}$
 
-$$\LARGE{\underbrace{\overbrace{\frak{Games\And\negthinspace Applications}}}}$$
+$$\tt\LARGE\operatorname{Current~Version:}{~~} \underline{\LARGE{\clubs~\empty.5.1\bold\_\normalsize\empty 2}}\small{.galaxy}\tt~\tiny_{STABLE}~ $$
 
-## Project Milestones:
+$${\colorbox{#350999}{\tt \color{#FFFFFF}{CONTRIBUTERS}}\brack{\tt ~Evan~Denny}}$$
 
-<h5>Evan Denny</h5>
+$\tt \underlinesegment{~~~Project~Roles~~~~~~~~~~~~~~~~~~~}$
 
-$$\underline{\text{Goal{}}}$$
+$\Bbb{\boxed{{\overgroup{\underset{\undergroup{\boxed{\ulcorner~~~\color{red}{\tt_{Front~End~Developer}}~~~\urcorner}}}{\boxed{\ulcorner_{\small \tt \color{green}{~~~ }{Lead{~}Developer}{~~~~}}\urcorner}}}~~\boxed\checkmark~\tt \large E{_D^J}}}}$
 
-This application is currently a **work in progress**. It is designed to compress my applications *(from simple to complex)* on a single app to test my milestones in learning **C$^+$$^+$ programming**. 
+---
 
-Included are demonstrations of my skills and examples of my abilities to *problem solve* and implement solutions to self-assigned tasks including creating *games*, *tools*, and using C$^+$$^+$ *APIs* like **OpenGL** and **SFML**.
+$$\LARGE{\undergroup{{\frak{~Games~\And~\negthinspace~Tools~}}}}$$
 
-The following programs have been incorporated into a single application (App(Debug) 0.5.1):
+This application is currently a **work in progress**. It is designed to compress my porfolio of games and tools built in **C$^+$$^+$** *(from simple to complex)* on a single app to test my milestones in my learning of **C$^+$$^+$ programming**.
 
-$$
-f(x) = \int_{-\infty}^{~\infty}
-    \hat \xi(\,e^{2 \pi})
-$$
+Included are demonstrations of my skills and examples of my abilities to *problem solve* and implement solutions to self-assigned tasks including creating frameworks, tools, and using C$^+$$^+$ *APIs* like **OpenGL** and **SFML**.
 
-|    left   | center | right |
-| :-------- | :----: | ----: |
-| 'My Name' |   44   | 
+The following programs have been incorporated into a single application for ease of access and demonstration.
+- Guessing Game
+- Hangman
+- Array Tutorial
 
-# *Games* Section:
+$\tt \tiny_{\clubs~AppDebug~\empty.5.1\_02}$
 
-## Guessing Game
-A random number is randomly selected with a mersenne twister engine between 1 and 100. Guess the number within 10 tries to beat the high score! Score updates upon achieving said goal. Every guess gives you a hint as to how close the number is. The closer you are the hotter it is, the further you are the colder it is. It's been modified several times to make it more difficult to guess the number. Specifically, as you get precise with your guesses, you have less of an idea of where the number is. Like Heisenburg's Uncertainty Principle:
 
-    """ The more precise your measurement, the less accurate your prediction of direction/momentum of a particle. """
 
-## Hangman
+## *Games* Section:
+
+### Guessing Game
+
+A random number is randomly selected with a mersenne twister engine between 1 and 100.
+> Guess the number within *10 tries* to beat the **high score!**
+
+Score updates upon achieving said goal.
+Every guess gives you a hint as to how close the number is.
+
+>The closer you are the hotter it gets, the further you are the colder it gets.
+>>It's been modified several times to make it more difficult to guess the number.
+>>>Specifically, as you get precise with your guesses, you have less of an idea of where the number is.
+
+| EVAN |
+| :--: |
+|$\ldotp{\tt DENNY}$|
+|$\jere$|
+
+### Hangman
+
 This is a multiplayer game. You need at least one other player to participate. The game takes two inputs from one player who knows the phrase or word chosen. That person can choose to give a hint with the second input. You can leave this option blank. (All letters are converted to lowercase letters to avoid confusion between the guess and the answer)
 When the phrase or word is entered, an answer key is created in the form of a vector<char>. Any extra common ASCII characters like '!?/\'.,"' and the space (' ') are removed from the vector. The vector is converted to lowercase, sorted alphabetically, duplicates are removed, and resized to fit the all the characters if duplicates were present.
-##### Example:
-    Let's say I enter a phrase 
- 
+
+#### Let's say I enter a phrase
 
 The program will convert the string input into a cstring array [W, h, o, ... e, n, ?].
 The vector is copied to a vector called charsLower where the letters are converted to lowercase {w, h, o ... e, n, ?}.
@@ -47,22 +60,31 @@ std::unique_copy to a different vector. This will remove duplicates, resize our 
 Well, between the first player entering a phrase and the second player guessing their first letter, all of the above is executed and the game is instantiated.
 
 Here's an example of what the user will experience:
-$$     |----|$$
-$$~~~~~~~~~~~~~~~~~|$$
-$$~~~~~~~~~~~~~~~~~|$$
-$$ __________| $$
 
-$_ _ _  _ _ _ _ _ _ _  _ _ _  _ _ _ _ _ _ _ _ ?$
+>Terminal/Command Line Interface
 
-    Guess a letter:
-Link: [link-id]
+```bash
+     |----|
+          |
+          |
+          |   
+__________|
 
-[link-id] https://www.google.com/
-The guesser has 6 lives (for the HEAD, LEFT_ARM, RIGHT_ARM, TORSO, LEFT_LEG, RIGHT_LEG).
-Every time the guesser enters a non-alphabetical character like a number, the program evaluates the character and if it isn't 'a-z' or 'A-Z' the guesser will receive a warning 'Invalid input' and won't lose a life. (Currently, entering numbers will trigger this feature, but other types of characters like '!' will not.)>-**<[BUG 0.5.1]>**
-Every time the guesser enters an incorrect character, it is appended to a vector<char> called 'wrong'. If a duplicate letter is guessed, the player doesn't lose a life and is warned 'You've already guessed that letter'.
+_ _ _  _ _ _ _ _ _ _  _ _ _  _ _ _ _ _ _ _ _ ?
+Hint: WWTW?
+Guess a letter: |
+```
 
-With an incorrect guess, the players life decreases by 1 (starting from 6).
+> The guesser has 6 lives (for the **HEAD**, **LEFT_ARM**, **RIGHT_ARM**, **TORSO**, **LEFT_LEG**, **RIGHT_LEG**).
+
+Every time the guesser enters a non-alphabetical character like a number, the program evaluates the character and if it isn't 'a-z' or 'A-Z' the guesser will receive a warning 'Invalid input' and won't lose a life. 
+
+`Currently, entering numbers will trigger this feature, but other types of characters like '!' will not. <[BUG 0.5.1_02]>`{.text-danger}
+
+>Every time the guesser enters an incorrect character, it is appended to a vector<char> called 'wrong'. 
+>>If a duplicate letter is guessed, the player doesn't lose a life and is warned 'You've already guessed that letter'.
+
+>With an incorrect guess, the players life decreases by 1 (starting from 6).
 If they guess correctly, the letter is added to a vector<char> called 'right' and the vector is sorted alphabetically. Duplicate guesses are handled the same as for the *'wrong'* vector.
 
 *This is done as a means for the guesser to fully guess the phrase and achieve a **win** state by matching their 'right' vector to the 'answer' vector.*
