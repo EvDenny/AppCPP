@@ -1,28 +1,20 @@
 # ![picture](images/cpp.sprite.png) $\textcolor{#4a49af}{\tt ^{APPLICATION}}$
 
-$$\tt\LARGE\operatorname{Current~Version \tiny_{~~STABLE} \LARGE :}{~~} \underline{\LARGE{\clubs~\empty.5.1\bold\_\normalsize\empty 2}}\small{.branch(galaxy)}$$
+$$\tt\LARGE\operatorname{Current~Version \tiny\_{~~STABLE} \LARGE :}{~~} \underline{\LARGE{~0.5.1\_{\normalsize / 1 2}}}\small{.branch(galaxy)}$$
 
 ---
 
-${\LARGE \colorbox{#350999}{\tt \color{#FFFFFF}{\small Contributers}}\brack{\tt\colorbox{#FFe000}{\small\color{#000000}{Evan~Denny}}}}$ $\LaTeX$
+${\LARGE \colorbox{#350999}{\tt \color{#FFFFFF}{\large Contributers}}\brack{\tt Evan~Denny}}$ 
 
-$\tt \tiny_{Last~Updated~on~9-15-2022~\clubs~AppDebug~\empty.5.1\_02}$
+$$ \tt \small \_{Last~Updated~On~9-17-2022~AppDebug~0.5.1-/12}$$
 
-$$\LARGE{\undergroup{{\frak{~Games~\And~\negthinspace~Tools~}}}}$$
+$$\LARGE{ \undergroup {\frak{Games~\And~\negthinspace ~Tools}}}$$
 
 This application is currently a **work in progress**. It is designed to compress my porfolio of games and tools built in **C$^+$$^+$** *(from simple to complex)* on a single app to test my milestones in my learning of **C$^+$$^+$ programming**.
 
 Included are demonstrations of my skills and examples of my abilities to *problem solve* and implement solutions to self-assigned tasks including creating frameworks, tools, and using C$^+$$^+$ *APIs* like **OpenGL** and **SFML**.
 
 The following programs have been incorporated into a single application for ease of access and demonstration.
-
-$$
-f(x) = \int_{-\infty}^{\infty}
-    \overgroup {(e^{2 \pi r})}+\underset{c^3}{\underline{\frak G\hbar}}
-$$
-$$
-\tiny {R_{\mu \nu} - {1 \over 2}R \, g_{\mu \nu} + \Lambda g_{\mu \nu}= {8 \pi G \over c^4} T_{\mu \nu}}
-$$
 
 - \[x] Guessing Game
 - \[x] Hangman
