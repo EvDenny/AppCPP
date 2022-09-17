@@ -8,6 +8,7 @@
 #include <chrono>
 #include "ArrayTutorial.h"
 #include "Sleep.h"
+#include "clear.h"
 
 void ArrayTutorial() {
     std::cout << "Evan Denny's Array Tutorial" << std::endl;
@@ -26,7 +27,7 @@ void ArrayTutorial() {
     } else {
         std::cout << "Wrong input!" << std::endl;
         Sleep::seconds(1);
-        system("clear");
+        cls();
         goto type1;
     }
     std::cout << "The output for sizeof(myarray): " << sizeof(myarray) << " bytes" <<std::endl;
@@ -42,7 +43,7 @@ void ArrayTutorial() {
     } else {
         std::cout << "Wrong input!" << std::endl;
         Sleep::milliseconds(1000);
-        system("clear");
+        cls();
         goto type2;
     }
     std::cout << "                  v (40 bytes)      v (4 bytes per integer)" << std::endl;
@@ -54,7 +55,7 @@ void ArrayTutorial() {
     Sleep::milliseconds(3800);
     std::cout << "Press 'ENTER' to continue..." << std::endl;
     getchar();
-    system("clear");
+    cls();
     std::cout << "int myarray[10];" << std::endl;
     std::cout << "Press 'ENTER' to output each element of myarray..." << std::endl;
     getchar();

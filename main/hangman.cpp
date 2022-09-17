@@ -13,6 +13,7 @@
 #include "Sleep.h"
 #include "vectors.h"
 #include "hangman.h"
+#include "clear.h"
 
 #define underline "\033[4m"
 #define reset "\033[0m"
@@ -167,7 +168,7 @@ void HANGMAN::getInput() {
     if (letter == '1' || letter == '2' || letter == '3' || letter == '4' || letter == '5' || letter == '6' || letter == '7' || letter == '8' || letter == '9' || letter == '0' || letter == '!' || letter =='?' || letter == '+' || letter == '-' || letter == '_' || letter == '#' || letter == '&' || letter == '*' || letter == '=' || letter == '.' || letter == ',' || letter == '\'' || letter == '"' || letter == '(' || letter == ')') {
         std::cout << "Invalid input" << std::endl;
         Sleep::seconds(1);
-        system("clear");
+        cls();
         getInput();
     } else {
         letter = tolower(letter);
@@ -176,7 +177,7 @@ void HANGMAN::getInput() {
         if (win == false) {
             win = false;
         } else if (win == true) {
-            system("clear");
+            cls();
             printHangman();
             printWrong();
             printLines2();
@@ -189,7 +190,7 @@ void HANGMAN::getInput() {
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cin.get();
-            system("clear");
+            cls();
         }
     }
 }
@@ -206,7 +207,7 @@ void HANGMAN::printAns() {
 }
 
 void HANGMAN::redraw() {
-    system("clear");
+    cls();
     printHangman();
     printWrong();
     printLines2();
@@ -216,7 +217,7 @@ void HANGMAN::redraw() {
 }
 
 void HANGMAN::play() {
-    system("clear");
+    cls();
     std::cout << "Welcome to Hangman!" << std::endl;
     std::cout << "Write your word or phrase: ";
     initArray();
@@ -244,7 +245,7 @@ void HANGMAN::play() {
 void HANGMAN::game() {
     bool gameOVER = false;
     do {
-    system("clear");
+    cls();
     std::cout << "  HANGMAN   " << std::endl;
     std::cout << "  --------  " << std::endl;
     std::cout << "  1. Play   " << std::endl;
