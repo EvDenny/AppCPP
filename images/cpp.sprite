@@ -1,0 +1,15 @@
+{
+   "style_name": "cpp",
+   "images": [
+      "29709c44a810964a114fc808885eb9c29f5550931cde77b42bb9d7f86b6f8f93.png"
+   ],
+   "orientation": "vertical",
+   "padding": 5,
+   "custom_styles": {
+      "display": "inline-block"
+   },
+   "stylesheet": "css",
+   "path_prefix": "",
+   "output": "png",
+   "enable_cache_busting": true
+}
