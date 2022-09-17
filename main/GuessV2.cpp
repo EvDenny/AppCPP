@@ -2,7 +2,7 @@
 #include <string>
 #include <bits/stdc++.h>
 #include <random>
-
+#include "clear.h"
 #include "Sleep.h"
 #include "Guess.h"
 
@@ -34,7 +34,7 @@ void Guessing_Game() {
 	int guess = 0;
 	int tries = 0;
 	do {
-		system("clear");
+		cls();
 		std::cout << underline "          GUESSING   GAME          " reset << std::endl;
 		Sleep::milliseconds(50);
 		std::cout << "|---HIGH-SCORE---> " << high_score_guessgame << " tries." << std::endl;

@@ -10,13 +10,6 @@
 
 using namespace std;
 
-int long mm;
-int long dd;
-int long yyyy;
-int long dotw;
-string DOTW;
-string month;
-
 bool _past = false;
 bool _future = false;
 int pastfuture = 0;
@@ -26,7 +19,7 @@ int * tmp = &today.m;
 int * typ = &today.y;
 int * thp = &today.hour;
 int * tminp = &today.minute;
-int * twp = &today.dotw;
+int * twp = &bgtoday.dotw;
 string * TWP = &today.DOTW;
 string * TMP = &today.month;
 
@@ -221,7 +214,8 @@ void genCountBack() {
 
 void genCount() {
     for (int i = cd; i < daysM[cm]; i++) {
-        nextDay(); };
+        nextDay(); 
+    };
     if (cm == 12) {
         nextYear();
     } else if (cm < 12) {
@@ -281,7 +275,7 @@ next:
         flyCount(); 
         if (equals == true)
             return;
-        };
+    };
     genCount();
     if (equals == true)
         return;
@@ -289,12 +283,13 @@ next:
 };
 
 void boolfp() {
-    if (_future == true) 
+    if (_future == true) { 
         countFuture();
-    else if (_past == true)
+    } else if (_past == true) {
         countPast2();
-    else
+    } else {
         return;
+    }
 };
 
 int main() {

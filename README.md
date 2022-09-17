@@ -1,14 +1,12 @@
 # ![picture](images/cpp.sprite.png) $\textcolor{#4a49af}{\tt ^{APPLICATION}}$
 
-$$\tt\LARGE\operatorname{Current~Version:}{~~} \underline{\LARGE{\clubs~\empty.5.1\bold\_\normalsize\empty 2}}\small{.galaxy}\tt~\tiny_{STABLE}~ $$
-
-$${\colorbox{#350999}{\tt \color{#FFFFFF}{CONTRIBUTERS}}\brack{\tt ~Evan~Denny}}$$
-
-$\tt \underlinesegment{~~~Project~Roles~~~~~~~~~~~~~~~~~~~}$
-
-$\Bbb{\boxed{{\overgroup{\underset{\undergroup{\boxed{\ulcorner~~~\color{red}{\tt_{Front~End~Developer}}~~~\urcorner}}}{\boxed{\ulcorner_{\small \tt \color{green}{~~~ }{Lead{~}Developer}{~~~~}}\urcorner}}}~~\boxed\checkmark~\tt \large E{_D^J}}}}$
+$$\tt\LARGE\operatorname{Current~Version \tiny_{~~STABLE} \LARGE :}{~~} \underline{\LARGE{\clubs~\empty.5.1\bold\_\normalsize\empty 2}}\small{.branch(galaxy)}$$
 
 ---
+
+${\LARGE \colorbox{#350999}{\tt \color{#FFFFFF}{\small Contributers}}\brack{\tt\colorbox{#FFe000}{\small\color{#000000}{Evan~Denny}}}}$ $\LaTeX$
+
+$\tt \tiny_{Last~Updated~on~9-15-2022~\clubs~AppDebug~\empty.5.1\_02}$
 
 $$\LARGE{\undergroup{{\frak{~Games~\And~\negthinspace~Tools~}}}}$$
 
@@ -17,13 +15,20 @@ This application is currently a **work in progress**. It is designed to compress
 Included are demonstrations of my skills and examples of my abilities to *problem solve* and implement solutions to self-assigned tasks including creating frameworks, tools, and using C$^+$$^+$ *APIs* like **OpenGL** and **SFML**.
 
 The following programs have been incorporated into a single application for ease of access and demonstration.
-- Guessing Game
-- Hangman
-- Array Tutorial
 
-$\tt \tiny_{\clubs~AppDebug~\empty.5.1\_02}$
+$$
+f(x) = \int_{-\infty}^{\infty}
+    \overgroup {(e^{2 \pi r})}+\underset{c^3}{\underline{\frak G\hbar}}
+$$
+$$
+\tiny {R_{\mu \nu} - {1 \over 2}R \, g_{\mu \nu} + \Lambda g_{\mu \nu}= {8 \pi G \over c^4} T_{\mu \nu}}
+$$
 
-
+- \[x] Guessing Game
+- \[x] Hangman
+- \[ ] ~~Array Tutorial | DEPRECATED~~
+- \[ ] MDY Calculator | Ironing Out Bugs
+- \[ ] Tic-Tac-Toe | Work in Progress
 
 ## *Games* Section:
 
@@ -52,11 +57,23 @@ When the phrase or word is entered, an answer key is created in the form of a ve
 #### Let's say I enter a phrase
 
 The program will convert the string input into a cstring array [W, h, o, ... e, n, ?].
+
 The vector is copied to a vector called charsLower where the letters are converted to lowercase {w, h, o ... e, n, ?}.
-Non-lowercase-alphabet characters are removed {w, h, o ... m, e, n, n}. (The function passes the vector by address so the '?' is converted into the character indexed previously to it. In this case that's 'n'. This isn't a problem though because in the next steps we remove duplicates!)
-The vector is sorted {a, a, c, c, e, e, e, h, h, h, h, m, n, n, o, s, t, t, t, w, w, w} (There are two 'n's because of the previous step.)
+
+Non-lowercase-alphabet characters are removed:
+>{w, h, o ... m, e, n, n}.
+
+>>(The function passes the vector by address so the '?' is converted into the character indexed previously to it. In this case that's 'n'. This isn't a problem though because in the next steps we remove duplicates!)
+
+The vector is sorted:
+>{a, a, c, c, e, e, e, h, h, h, h, m, n, n, o, s, t, t, t, w, w, w}
+
+>>(There are two 'n's because of the previous step.)
+
 std::unique_copy to a different vector. This will remove duplicates, resize our vector to fit each of the alphabetical characters used. {a, c, e, h, m, n, o, s, t, w} is our vector<char> called 'answer' (Key).
+
 'acehmnostw' are all the characters used from the alphabet. Now you're probably wondering why I explained all this?
+
 Well, between the first player entering a phrase and the second player guessing their first letter, all of the above is executed and the game is instantiated.
 
 Here's an example of what the user will experience:
@@ -115,3 +132,7 @@ The function then hands the thread back to the Mainloop to redraw the screen. (T
 *This function is included towards the end of the getInput() function to evaluate the game states.*
 ##### $eva\~n$DEBUGGING
 // PrintAns() --> This function is purposefully commented out of the Mainloop but is included nonetheless. This is for debugging purposes. It displays the 'answer' vector and the 'right' vector (with a divider between them) to the guesser to make sure the program is running correctly.
+
+$\tt \underlinesegment{~~~Project~Roles~~~~~~~~~~~~~~~~~~~}$
+
+${{{\overgroup{\underset{\undergroup{\boxed{\ulcorner~~~\color{red}{\tt_{Front~End~Developer}}~~~\urcorner}}}{\boxed{\ulcorner_{\small \tt \color{green}{~~~ }{Lead{~}Developer}{~~~~}}\urcorner}}}~~\boxed\checkmark~\tt \large E{_D^J}}}}$

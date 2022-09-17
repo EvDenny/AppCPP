@@ -1,10 +1,14 @@
-#include <iostream> 
+#include <iostream>
+#include <string>
+#include <tuple>
 #include <ctime>
-#include "now.hpp"
+#include <time.h>
 using namespace std;
 
-Now::static void displayNow() {
-    time_t t = time(0);
-    struct tm *now = localtime(&t);
-    cout << "The current time is: " << now->tm_hour << ":" << now->tm_min << ":" << now->tm_sec << endl;
+time_t t = time(0)  ;
+struct tm *Now = localtime(&t);
+
+int main() {
+    cout << Now->tm_hour;
+    return 0;
 }

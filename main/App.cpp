@@ -12,19 +12,11 @@
 #include "menu.h"
 #include "Guess.h"
 #include "hangman.h"
+#include "clear.h"
 
 #define underline "\033[4m"
 #define reset "\033[0m"
 
-void slp(int time) {
-    if (time > 30) {
-        Sleep::milliseconds(time);
-    } else if (time > 0 && time <= 30) {
-        Sleep::seconds(time);
-    } else {
-        return;
-    }
-}
 void mainSUB() {
     if (mainPLAYBool) {
         mainNull;
@@ -43,7 +35,7 @@ void gameMenus() {
         do {
             Menu::run(Guessing_Game);
             std::cin.clear();
-            system("clear");
+            cls();
             Menu::switchEndOfGame();
         } while (endOfGamePLAYAGAINBool);
     } else if (gameHANGMANBool) {
@@ -52,7 +44,7 @@ void gameMenus() {
         do {
             Menu::run(HANGMAN::game);
             std::cin.clear();
-            system("clear");
+            cls();
             Menu::switchEndOfGame();
         } while (endOfGamePLAYAGAINBool);
     } else if (gameEXITBool) {
@@ -66,7 +58,7 @@ void tutorMenus() {
         do {
             Menu::run(ArrayTutorial);
             std::cin.clear();
-            system("clear");
+            cls();
             Menu::switchEndOfTutor();
         } while (endOfTutorAGAINBool);
     } else if (tutorEXITBool) {
@@ -84,12 +76,12 @@ void clearMenuStates() {
 int main() {
     do {
         clearMenuStates();
-        system("clear");
+        cls();
         Menu::switchMain();
         mainSUB();
         gameMenus();
         tutorMenus();
     } while (!(mainEXITBool) || !(gameEXITBool) || !(tutorEXITBool));
-    system("clear");
+    cls();
     Menu::exiting();
 }

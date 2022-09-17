@@ -1,6 +1,8 @@
 #ifndef _menu_h
 #define _menu_h
 
+#include "clear.h"
+
 #ifndef __MENU_OPTIONS__
 //_________________MENU_ENUMS___________________
 // GAME MENU ENUMERATIONS
@@ -98,6 +100,7 @@ endOfTutorMenu endOfTutorOption = endOfTutorMenu::null;
 
 #include <iostream>
 #include "Sleep.h"
+#include "clear.h"
 
 std::string invalid = "Invalid input, please try again";
 
@@ -163,13 +166,13 @@ public:
             default:
                 mainNull;
                 invalidInput();
-                system("clear");
+                cls();
                 break;
         }
 	    std::cin.clear();
 	    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         } while (mainNullBool);
-        system("clear");
+        cls();
     }
     static void switchGame() {
         int input;
@@ -189,13 +192,13 @@ public:
             default:
                 gameNull;
                 invalidInput();
-                system("clear");
+                cls();
                 break;
         }
         std::cin.clear();
 	    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         } while (gameNullBool);
-        system("clear");
+        cls();
     }
     static void switchTutor() {
         int input;
@@ -212,13 +215,13 @@ public:
             default:
                 tutorNull;
                 invalidInput();
-                system("clear");
+                cls();
                 break;
         }
 	    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::cin.clear();
         } while (tutorNullBool);
-        system("clear");
+        cls();
     }
     static void switchEndOfGame() {
         int input;
@@ -233,19 +236,19 @@ public:
                 endOfGameEXIT;
                 break;
             case 3:
-                system("clear");
+                cls();
                 Menu::exiting();
                 break;
             default:
                 endOfGameNull;
                 invalidInput();
-                system("clear");
+                cls();
                 break;
         }
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::cin.clear();
         } while (endOfGameNullBool);
-        system("clear");
+        cls();
     }
     static void switchEndOfTutor() {
         int input;
@@ -266,27 +269,27 @@ public:
             default:
                 endOfTutorNull;
                 invalidInput();
-                system("clear");
+                cls();
                 break;
 }
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::cin.clear();
         } while (endOfTutorNullBool);
-        system("clear");
+        cls();
     }
     static void starting() {
         std::cout << "Starting Program..." << std::endl;
         Sleep::milliseconds(600);
         std::cout << "LOADED." << std::endl;
         Sleep::milliseconds(350);
-        system("clear");
+        cls();
     }
     static void exiting() {
         std::cout << "Exiting..." << std::endl;
         Sleep::milliseconds(500);
         std::cout << "Goodbye!" << std::endl;
         Sleep::seconds(1);
-        system("clear");
+        cls();
         exit(0);
     }
 };
