@@ -6,7 +6,7 @@ $$\tt\LARGE\operatorname{Current~Version \tiny\_{~~STABLE} \LARGE :}{~~} \underl
 
 ${\LARGE \colorbox{#350999}{\tt \color{#FFFFFF}{\large Contributers}}\brack{\tt Evan~Denny}}$ 
 
-$$ \tt \small \_{Last~Updated~On~9-17-2022~AppDebug~0.5.1-/12}$$
+$\tt \small \_{Last~Updated~On~9-17-2022~AppDebug~0.5.1-/12} $
 
 $$\LARGE{ \undergroup {\frak{Games~\And~\negthinspace ~Tools}}}$$
 
