@@ -2,18 +2,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "C/C++: gcc.exe build and debug active file",
+            "name": "C/C++: g++.exe build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "program": "C:\\Users\\evand\\Documents\\Github\\AppCPP\\WIP\\MDY\\mdy2.exe",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "C:\\Users\\user\\Documents\\GitHub\\AppCPP",
+            "cwd": "C:\\Users\\evand\\Documents\\GitHub\\AppCPP\\WIP\\MDY\\",
             "environment": [],
-            "externalConsole": false,
+            "externalConsole": true,
             "MIMode": "gdb64",
-            "miDebuggerPath": "C:\\TDM-GCC-64\\bin\\gdb64",
-            "preLaunchTask": "C/C++: gcc.exe build active file"
+            "miDebuggerPath": "C:\\TDM-GCC-64\\bin\\gdb.exe",
+            "preLaunchTask": "C/C++: g++.exe build active file"
         }
     ]
 }

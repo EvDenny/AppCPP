@@ -54,7 +54,8 @@ void ArrayTutorial() {
     std::cout << std::endl << "Let's try to access the elements of myarray." << std::endl;
     Sleep::milliseconds(3800);
     std::cout << "Press 'ENTER' to continue..." << std::endl;
-    getchar();
+    
+();
     cls();
     std::cout << "int myarray[10];" << std::endl;
     std::cout << "Press 'ENTER' to output each element of myarray..." << std::endl;
