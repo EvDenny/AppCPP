@@ -1,14 +1,27 @@
 # ![picture](images/cpp.sprite.png) $\textcolor{#4a49af}{\tt ^{APPLICATION}}$
 
-$$\tt\LARGE\operatorname{Current~Version \tiny\_{~~STABLE} \LARGE :}{~~} \underline{\LARGE{~0.5.1\_{\normalsize / 1 2}}}\small{.branch(galaxy)}$$
+### CURRENT VERSION:
+$\LARGE \underline{\LARGE{~0.5.1\_{\normalsize / 1 5}}}\small{.branch(galaxy)}_{\tt \tiny STABLE}$
+
+$${\LARGE \colorbox{#350999}{\tt \color{#FFFFFF}{\large Contributers}}\brack{\tt Evan~Denny}}$$ 
+
+$$ \tt Last~~Updated~~~On~~~~ \underline {9/18/2022} $$
+
+# Latest Changes
+
+#### Version 0.5.1-15:
+ 
+ - Replaced mdy.cpp with revamped **mdy2.cpp**
+    -  *Object-Oriented*
+    -  Increased Readability
+    -  Fixed previous bug from mdy.cpp
+ -  Only a few changes need to be made to mdy2.cpp to have a fully working tool for the Tools Section of the program
+ -  New ideas for tools added to README.md
+ -  *Documentation for mdy2.cpp should be added for practice designing code for other programmers to read*
 
 ---
 
-${\LARGE \colorbox{#350999}{\tt \color{#FFFFFF}{\large Contributers}}\brack{\tt Evan~Denny}}$ 
-
-$\tt \small \_{Last~Updated~On~9-17-2022~AppDebug~0.5.1-/12} $
-
-$$\LARGE{ \undergroup {\frak{Games~\And~\negthinspace ~Tools}}}$$
+$$\LARGE{ \underline {\frak{Games~\And~\negthinspace ~Tools}}}$$
 
 This application is currently a **work in progress**. It is designed to compress my porfolio of games and tools built in **C$^+$$^+$** *(from simple to complex)* on a single app to test my milestones in my learning of **C$^+$$^+$ programming**.
 
