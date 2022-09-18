@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "configurationProvider": "${default}",
+            "compilerPath": "C:/TDM-GCC-64/bin/g++.exe",
+            "intelliSenseMode": "windows-gcc-arm64",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++20"
+        }
+    ],
+    "version": 4
+}

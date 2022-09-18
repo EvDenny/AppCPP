@@ -5,8 +5,6 @@
 #include <cstdio>
 #include <cmath>
 
-#define _lt localtime
-
 using namespace std;
 
 void hms(int hms) {
@@ -19,7 +17,7 @@ void hms(int hms) {
 
 int main () {
 	time_t t = time(0);
-	tm *tm = _lt(&t);
+	tm *tm = localtime(&t);
 	int year = tm->tm_year + 1900;
 	int month = tm->tm_mon + 1;
 	int day = tm->tm_mday;
