@@ -16,11 +16,18 @@ Included are demonstrations of my skills and examples of my abilities to *proble
 
 The following programs have been incorporated into a single application for ease of access and demonstration.
 
+##### Games
+
 - \[x] Guessing Game
 - \[x] Hangman
-- \[ ] ~~Array Tutorial | DEPRECATED~~
-- \[ ] MDY Calculator | Ironing Out Bugs
-- \[ ] Tic-Tac-Toe | Work in Progress
+- \[ ] Tic-Tac-Toe | Barely Started
+
+##### Tools
+
+- \[ ] MDY Calculator | 95% Complete
+- \[ ] Website Parser | Looking into Web Scraping with C++ (Python is perfect for this so it might be an opportunity to use Python in C++ or vice-versa)
+- \[ ] RNG (Random Number Generator) | Already use Mersenne Twister Engine for Guessing Game, woring on making the engine into a tool for customizing the uniform_int_distribution for other forms of distribution and different ranges and types of ranges
+- [ ] File manipulation (Creationo, Reading, Writing) | Still learning fstream
 
 ## *Games* Section:
 
@@ -35,11 +42,6 @@ Every guess gives you a hint as to how close the number is.
 >The closer you are the hotter it gets, the further you are the colder it gets.
 >>It's been modified several times to make it more difficult to guess the number.
 >>>Specifically, as you get precise with your guesses, you have less of an idea of where the number is.
-
-| EVAN |
-| :--: |
-|$\ldotp{\tt DENNY}$|
-|$\jere$|
 
 ### Hangman
 
@@ -125,6 +127,4 @@ The function then hands the thread back to the Mainloop to redraw the screen. (T
 ##### $eva\~n$DEBUGGING
 // PrintAns() --> This function is purposefully commented out of the Mainloop but is included nonetheless. This is for debugging purposes. It displays the 'answer' vector and the 'right' vector (with a divider between them) to the guesser to make sure the program is running correctly.
 
-$\tt \underlinesegment{~~~Project~Roles~~~~~~~~~~~~~~~~~~~}$
-
-${{{\overgroup{\underset{\undergroup{\boxed{\ulcorner~~~\color{red}{\tt_{Front~End~Developer}}~~~\urcorner}}}{\boxed{\ulcorner_{\small \tt \color{green}{~~~ }{Lead{~}Developer}{~~~~}}\urcorner}}}~~\boxed\checkmark~\tt \large E{_D^J}}}}$
+$${{{{\underset{{\LARGE\boxed{\ulcorner~~~\color{yellow}{\tt_{Front~End~Development~INCOMPLETE}}~~~\urcorner}}}{\boxed{\ulcorner_{\LARGE \tt \color{blue}{~~~ }{Lead{~}Developer}{~~~~}}\urcorner}}}~~\boxed\checkmark~\tt \large E{_D^J}}}}$$
