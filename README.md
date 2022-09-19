@@ -1,7 +1,8 @@
 # ![picture](images/cpp.sprite.png) $\textcolor{#4a49af}{\tt ^{APPLICATION}}$
 
 ### CURRENT VERSION:
-$\LARGE \underline{\LARGE{~0.5.1\_{\normalsize / 1 5}}}\small{.branch(galaxy)}_{\tt \tiny STABLE}$
+
+$$\LARGE \underline{\LARGE{~0.5.1\_{\normalsize / 1 5}}}\small{.branch(galaxy)}_{\tt \tiny STABLE}$$
 
 $${\LARGE \colorbox{#350999}{\tt \color{#FFFFFF}{\large Contributers}}\brack{\tt Evan~Denny}}$$ 
 
