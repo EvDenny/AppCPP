@@ -2,7 +2,9 @@
 
 ### CURRENT VERSION:
 
-$$\LARGE \underline{\LARGE{~0.5.1\_{\normalsize / 1 5}}}\small{.branch(galaxy)}_{\tt \tiny STABLE}$$
+[![CodeFactor](https://www.codefactor.io/repository/github/evdenny/appcpp/badge/master)](https://www.codefactor.io/repository/github/evdenny/appcpp/overview/master)
+
+$$\LARGE \underline{\LARGE{~0.5.1\_{\normalsize / 1 5}}}\small{.branch(galaxy)}_{\tt \tiny STABLE}$$ 
 
 $${\LARGE \colorbox{#350999}{\tt \color{#FFFFFF}{\large Contributers}}\brack{\tt Evan~Denny}}$$ 
 
