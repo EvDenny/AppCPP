@@ -47,9 +47,13 @@ public:
     inline void currentTime() { cout << "Today is " << returnDOTW(dotw) << ", " << month << " " << day << ", " << year << ". \n" << "The time is "; displayTime(); };
     inline int getCount() { return _count; };
     inline void count() { if (past) { dd--; Today--; if (Today<0) { setToday(6); } } else if (future) { dd++; Today++; if(Today>6) {setToday(0); } } _count++; };
-    void check();
+    inline void Future() { cout << "The date you entered is in the future!\n"; future = true; };
+    inline void Past() {cout << "The date you entered is in the past!\n"; past = true; };
+    inline bool leapDay(int month, int year) { return (month == 2 && year % 4 == 0); };
+    int Input(int input, string question, int max, int min, int max2 = 31, bool value = false);
     void handleInput(int INPUT, int max, int min);
     void getInput();
+    void check();
     void prevMonth();
     void nextMonth();
     void nextYear();
@@ -118,74 +122,55 @@ void Calendar::check() {
         if (past || future) {
             cout << "That day is " << _count << " days away!" << endl;
             cout << "It is a " << returnDOTW(Today) << "!" << endl;
-            this_thread::sleep_for(chrono::milliseconds(2200));
+            this_thread::sleep_for(chrono::milliseconds(800));
             finish = true;
-            exit(0);
         }
     }
     if (!past && !future) {
         if (input.mm >= mm && input.yyyy == yyyy) {
             if (input.mm == mm && input.dd > dd) {
-                cout << "The date you entered is in the future!\n";
-                future = true;
+                Future();
             } else if (input.mm == mm && input.dd < dd) {
-                cout << "The date you entered is in the past!\n";
-                past = true;
+                Past();
             } else {
-                cout << "The date you entered is in the future!\n";
-                future = true;
+                Future();
             }
         } else if (input.mm <= mm && input.yyyy == yyyy) {
             if (input.mm == mm && input.dd > dd) {
-                cout << "The date you entered is in the future!\n";
-                future = true;
+                Future();
             } else if (input.mm == mm && input.dd < dd) {
-                cout << "The date you entered is in the past!\n";
-                past = true;
+                Past();
             } else {
-                cout << "The date you entered is in the past!\n";
-                past = true;
+                Past();
             }
         } else if (input.yyyy > yyyy) {
-            cout << "The date you entered is in the future!\n";
-            future = true;
+            Future();
         } else if (input.yyyy < yyyy) {
-            cout << "The date you entered is in the past!\n";
-            past = true;
+            Past();
         }
     }
 };
 
-void Calendar::getInput() {
-    cout << "Enter a date. It will tell you how many days away it is and that day of the week." << endl;
-    int _yyyy;
-    do{
-        cin.clear();
-        cout << "Enter a year (e.g. 2022):";
-        cin >> _yyyy;
-        handleInput(_yyyy, 12000, -10000);
-    } while (!_continue);
-    int _mm;
-    do{
-        cin.clear();
-        cout << "Enter a month:";
-        cin >> _mm;
-        handleInput(_mm, 12, 1);
-    } while (!_continue);
-    int _dd;
+int Calendar::Input(int input, string question, int max, int min, int max2, bool value) {
     do {
         cin.clear();
-        cout << "Enter a days:";
-        cin >> _dd;
-        if (_mm == 2 && _yyyy%4==0) {
-            handleInput(_dd, monthDays[0], 1);
+        cout << question;
+        cin >> input;
+        if (value) {
+            handleInput(input, max2, min);
         } else {
-            handleInput(_dd, monthDays[_mm], 1);
+            handleInput(input, max, min);
         }
     } while (!_continue);
-    input.yyyy = _yyyy;
-    input.mm = _mm;
-    input.dd = _dd;
+    return input;
+}
+
+void Calendar::getInput() {
+    cout << "Enter a date. It will tell you how many days away it is and that day of the week." << endl;
+    int _yyyy, _mm, _dd;
+    input.yyyy = Calendar::Input(_yyyy, "Enter a year (e.g. 2022):", 12000, -10000);
+    input.mm = Calendar::Input(_mm, "Enter a month:", 12, 1);
+    input.dd = Input(_dd, "Enter a day:", monthDays[_mm], 1, monthDays[0], leapDay(_mm, _yyyy));
 };
 
 void Calendar::handleInput(int INPUT, int max, int min) {
@@ -216,6 +201,16 @@ void Calendar::mainloopBackward() {
         check();
     } while (!finish);
 }
+
+class CurrentTime{
+private:
+    int day, month, year, hour, minute, second, dotw;
+public:
+    CurrentTime() {
+        time_t t = time(0);
+        struct tm *now = localtime(&t);
+    };w
+};
 
 int main() {
     time_t t = time(0);

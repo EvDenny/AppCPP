@@ -1,4 +1,4 @@
-# ![picture](images/cpp.sprite.png) $\textcolor{#4a49af}{\tt ^{APPLICATION}}$
+# ![picture](./images/cpp.sprite.png) $\textcolor{#4a49af}{\tt ^{APPLICATION}}$
 
 $$\tt\LARGE\operatorname{Current~Version \tiny\_{~~STABLE} \LARGE :}{~~} \underline{\LARGE{~0.5.1\_{\normalsize / 1 2}}}\small{.branch(galaxy)}$$
 
