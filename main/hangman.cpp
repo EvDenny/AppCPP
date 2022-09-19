@@ -30,6 +30,11 @@ std::vector<char> charsLower;
 std::string phrase;
 std::string hint;
 
+char symbols[] = {' ', '/', '?', ',', '.', '(', ')', '!', '@', '#', '$', '%', '^', '&', '*', '-', '+', '=', '\''};
+
+const char symbols2[] = {' ', '/', '?', ',', '.', '(', ')', '!', '@', '#', '$', '%', '^', '&', '*', '-', '+', '=', '\''};
+
+
 void HANGMAN::printHint() {
     std::cout << "Hint: " << hint << std::endl;
 }
@@ -115,39 +120,14 @@ void HANGMAN::checkWin() {
 void HANGMAN::printLines2() {
     for (int i = 0; i < charsLower.size(); i++) {
         if (!isInVector(right, charsLower[i])) {
-            if (charsLower[i] == ' ') {
-                std::cout << " ";
-            } else if (charsLower[i] == '\'') {
-                std::cout << "\' ";
-            } else if (charsLower[i] == '?') {
-                std::cout << "? ";
-            } else if (charsLower[i] == '!') {
-                std::cout << "! ";
-            } else if (charsLower[i] == '#') {
-                std::cout << "#";
-            } else if (charsLower[i] == '.') {
-                std::cout << ". ";
-            } else if (charsLower[i] == ',') {
-                std::cout << ", ";
-            } else if (charsLower[i] == ';') {
-                std::cout << "; ";
-            } else if (charsLower[i] == ':') {
-                std::cout << ": ";
-            } else if (charsLower[i] == '"') {
-                std::cout << '"' << " ";
-            } else if (charsLower[i] == '&') {
-                std::cout << "& ";
-            } else if (charsLower[i] == '(') {
-                std::cout << "( ";
-            } else if (charsLower[i] == ')') {
-                std::cout << ") ";
-            } else if (charsLower[i] == '-') {
-                std::cout << "- ";
-            } else if (charsLower[i] == '+') {
-                std::cout << "+ ";
-            } else if (charsLower[i] == '=') {
-                std::cout << "= ";
-            } else {
+            bool boolean = false;
+            for (int g = 0; g < 19; g++) {
+                if (charsLower[i] == symbols2[g]) {
+                    std::cout << symbols2[g] << " ";
+                    boolean = true;
+                }
+            }
+            if (!boolean) {
                 std::cout << "_ ";
             }
         } else if (isInVector(right, charsLower[i])) {
@@ -260,12 +240,12 @@ void HANGMAN::game() {
     } else if (selection == "2") {
         std::cout << "Exiting..." << std::endl;
         std::this_thread::sleep_for(std::chrono::seconds(1));
-        system("clear");
+        cls();
         gameOVER = true;
     } else {
         std::cout << "Invalid selection." << std::endl;
         std::this_thread::sleep_for(std::chrono::seconds(1));
-        system("clear");
+        cls();
     }
     } while (gameOVER = false);
     answer.clear();

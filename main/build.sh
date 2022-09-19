@@ -1,6 +1,2 @@
 #!/bin/bash
-
-CC=g++
-LDFLAGS="$LDFLAGS"
-
-$CC App.cpp GuessV2.cpp hangman.cpp ArrayTutorial.cpp $LDFLAGS -o AppDebug0-1-4.1
+g++ App.cpp clear.cpp ArrayTutorial.cpp hangman.cpp GuessV2.cpp -o AppDebugLinux
