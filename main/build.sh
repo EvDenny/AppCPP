@@ -1,2 +1,2 @@
 #!/bin/bash
-g++ App.cpp clear.cpp ArrayTutorial.cpp hangman.cpp GuessV2.cpp -o AppDebugLinux
+g++ ./main/App.cpp ./main/clear.cpp ./main/ArrayTutorial.cpp ./main/hangman.cpp ./main/GuessV2.cpp -o AppDebugLinux
