@@ -1,20 +1,22 @@
 # ![picture](images/cpp.sprite.png) $\textcolor{#4a49af}{\tt ^{APPLICATION}}$
 
-### CURRENT VERSION:
-
 [![CodeFactor](https://www.codefactor.io/repository/github/evdenny/appcpp/badge/master)](https://www.codefactor.io/repository/github/evdenny/appcpp/overview/master) [![CodeQL](https://github.com/EvDenny/AppCPP/actions/workflows/codeql.yml/badge.svg)](https://github.com/EvDenny/AppCPP/actions/workflows/codeql.yml) [![Windows](https://svgshare.com/i/ZhY.svg)](https://svgshare.com/i/ZhY.svg) [![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg) [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
 
-[![GitHub commits](https://badgen.net/github/commits/Naereen/Strapdown.js)](https://GitHub.com/Naereen/StrapDown.js/commit/)
+[![GitHub commits](https://badgen.net/github/commits/EvDenny/AppCPP)](https://GitHub.com/EvDenny/AppCPP/commit/) [![GitHub latest commit](https://badgen.net/github/last-commit/EvDenny/AppCPP)](https://GitHub.com/EvDenny/AppCPP/commit/) [![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/issues/) 
 
-$$\LARGE \underline{\LARGE{~0.5.1\_{\normalsize / 1 5}}}\small{.branch(galaxy)}_{\tt \tiny STABLE}$$ 
+### CURRENT VERSION:
+
+$$\LARGE \underline{\LARGE{~0.5.1\_{\normalsize / 1 7}}}\small{.branch(galaxy)}_{\tt \tiny STABLE}$$ 
 
 $${\LARGE \colorbox{#350999}{\tt \color{#FFFFFF}{\large Contributers}}\brack{\tt Evan~Denny}}$$ 
 
 $$ \tt Last~~Updated~~~On~~~~ \underline {9/18/2022} $$
 
+[![Evan's top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=EvDenny&theme=blue-green)](https://github.com/anuraghazra/github-readme-stats)
+
 # Latest Changes
 
-#### Version 0.5.1-15:
+#### Version 0.5.1-17:
  
  - Replaced mdy.cpp with revamped **mdy2.cpp**
     -  *Object-Oriented*
