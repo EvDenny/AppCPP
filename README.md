@@ -2,7 +2,9 @@
 
 ### CURRENT VERSION:
 
-[![CodeFactor](https://www.codefactor.io/repository/github/evdenny/appcpp/badge/master)](https://www.codefactor.io/repository/github/evdenny/appcpp/overview/master) [![CodeQL](https://github.com/EvDenny/AppCPP/actions/workflows/codeql.yml/badge.svg)](https://github.com/EvDenny/AppCPP/actions/workflows/codeql.yml)
+[![CodeFactor](https://www.codefactor.io/repository/github/evdenny/appcpp/badge/master)](https://www.codefactor.io/repository/github/evdenny/appcpp/overview/master) [![CodeQL](https://github.com/EvDenny/AppCPP/actions/workflows/codeql.yml/badge.svg)](https://github.com/EvDenny/AppCPP/actions/workflows/codeql.yml) [![Windows](https://svgshare.com/i/ZhY.svg)](https://svgshare.com/i/ZhY.svg) [![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg) [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
+
+[![GitHub commits](https://badgen.net/github/commits/Naereen/Strapdown.js)](https://GitHub.com/Naereen/StrapDown.js/commit/)
 
 $$\LARGE \underline{\LARGE{~0.5.1\_{\normalsize / 1 5}}}\small{.branch(galaxy)}_{\tt \tiny STABLE}$$ 
 
@@ -26,7 +28,7 @@ $$ \tt Last~~Updated~~~On~~~~ \underline {9/18/2022} $$
 
 $$\LARGE{ \underline {\frak{Games~\And~\negthinspace ~Tools}}}$$
 
-This application is currently a **work in progress**. It is designed to compress my porfolio of games and tools built in **C$^+$$^+$** *(from simple to complex)* on a single app to test my milestones in my learning of **C$^+$$^+$ programming**.
+This application is currently a **work in progress**. It is designed to compress my porfolio of games and tools built in **C$^+$$^+$** *(from simple to complex)* on a single app to test my milestones in my learning of **C $^+$$^+$ programming**.
 
 Included are demonstrations of my skills and examples of my abilities to *problem solve* and implement solutions to self-assigned tasks including creating frameworks, tools, and using C$^+$$^+$ *APIs* like **OpenGL** and **SFML**.
 
