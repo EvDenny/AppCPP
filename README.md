@@ -4,6 +4,8 @@
 
 [![GitHub commits](https://badgen.net/github/commits/EvDenny/AppCPP)](https://GitHub.com/EvDenny/AppCPP/commit/) [![GitHub latest commit](https://badgen.net/github/last-commit/EvDenny/AppCPP)](https://GitHub.com/EvDenny/AppCPP/commit/) [![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/issues/) 
 
+[![Evan's top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=EvDenny&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
+
 ### CURRENT VERSION:
 
 $$\LARGE \underline{\LARGE{~0.5.1\_{\normalsize / 1 7}}}\small{.branch(galaxy)}_{\tt \tiny STABLE}$$ 
@@ -11,8 +13,6 @@ $$\LARGE \underline{\LARGE{~0.5.1\_{\normalsize / 1 7}}}\small{.branch(galaxy)}_
 $${\LARGE \colorbox{#350999}{\tt \color{#FFFFFF}{\large Contributers}}\brack{\tt Evan~Denny}}$$ 
 
 $$ \tt Last~~Updated~~~On~~~~ \underline {9/18/2022} $$
-
-[![Evan's top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=EvDenny&theme=blue-green)](https://github.com/anuraghazra/github-readme-stats)
 
 # Latest Changes
 
