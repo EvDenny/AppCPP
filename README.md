@@ -1,16 +1,36 @@
 # ![picture](./images/cpp.sprite.png) $\textcolor{#4a49af}{\tt ^{APPLICATION}}$
 
-$$\tt\LARGE\operatorname{Current~Version \tiny\_{~~STABLE} \LARGE :}{~~} \underline{\LARGE{~0.5.1\_{\normalsize / 1 2}}}\small{.branch(galaxy)}$$
+[![CodeFactor](https://www.codefactor.io/repository/github/evdenny/appcpp/badge/master)](https://www.codefactor.io/repository/github/evdenny/appcpp/overview/master) [![CodeQL](https://github.com/EvDenny/AppCPP/actions/workflows/codeql.yml/badge.svg)](https://github.com/EvDenny/AppCPP/actions/workflows/codeql.yml) [![Windows](https://svgshare.com/i/ZhY.svg)](https://svgshare.com/i/ZhY.svg) [![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg) [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
+
+[![GitHub commits](https://badgen.net/github/commits/EvDenny/AppCPP)](https://GitHub.com/EvDenny/AppCPP/commit/) [![GitHub latest commit](https://badgen.net/github/last-commit/EvDenny/AppCPP)](https://GitHub.com/EvDenny/AppCPP/commit/) [![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/issues/) 
+
+[![Evan's top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=EvDenny&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
+
+$$\LARGE \tt CURRENT~VERSION:$$
+
+$$\LARGE \underline{\LARGE{~0.5.1\_{\normalsize / 1 7}}}\small{.branch(galaxy)}_{\tt \tiny STABLE}$$ 
+
+$${\LARGE \colorbox{#350999}{\tt \color{#FFFFFF}{\large Contributers}}\brack{\tt Evan~Denny}}$$ 
+
+$$ \tt Last~~Updated~~~On~~~~ \underline {9/20/2022} $$
+
+# Latest Changes
+
+#### Version 0.5.1-17:
+ 
+ - Replaced mdy.cpp with revamped **mdy2.cpp**
+    -  *Object-Oriented*
+    -  Increased Readability
+    -  Fixed previous bug from mdy.cpp
+ -  Only a few changes need to be made to mdy2.cpp to have a fully working tool for the Tools Section of the program
+ -  New ideas for tools added to README.md
+ -  *Documentation for mdy2.cpp should be added for practice designing code for other programmers to read*
 
 ---
 
-${\LARGE \colorbox{#350999}{\tt \color{#FFFFFF}{\large Contributers}}\brack{\tt Evan~Denny}}$ 
+$$\LARGE{ \underline {\frak{Games~\And~\negthinspace ~Tools}}}$$
 
-$\tt \small \_{Last~Updated~On~9-17-2022~AppDebug~0.5.1-/12} $
-
-$$\LARGE{ \undergroup {\frak{Games~\And~\negthinspace ~Tools}}}$$
-
-This application is currently a **work in progress**. It is designed to compress my porfolio of games and tools built in **C$^+$$^+$** *(from simple to complex)* on a single app to test my milestones in my learning of **C$^+$$^+$ programming**.
+This application is currently a **work in progress**. It is designed to compress my porfolio of games and tools built in **C$^+$$^+$** *(from simple to complex)* on a single app to test my milestones in my learning of **C $^+$$^+$ programming**.
 
 Included are demonstrations of my skills and examples of my abilities to *problem solve* and implement solutions to self-assigned tasks including creating frameworks, tools, and using C$^+$$^+$ *APIs* like **OpenGL** and **SFML**.
 
