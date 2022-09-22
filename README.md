@@ -30,9 +30,9 @@ $$ \tt Last~~Updated~~~On~~~~ \underline {9/20/2022} $$
 
 $$\LARGE{ \underline {\frak{Games~\And~\negthinspace ~Tools}}}$$
 
-This application is currently a **work in progress**. It is designed to compress my porfolio of games and tools built in C$^+$$^+$ *(from simple to complex)* on a single app to test my milestones in my learning of C ${^+}$${^+}$ programming.
+This application is currently a **work in progress**. It is designed to compress my porfolio of games and tools built in C $\negthinspace ^+$ $\negthickspace ^+$ *(from simple to complex)* on a single app to test my milestones in my learning of C $\negthinspace ^+$ $\negthickspace ^+$ programming.
 
-Included are demonstrations of my skills and examples of my abilities to *problem solve* and implement solutions to self-assigned tasks including creating frameworks, tools, and using C$^+$$^+$ *APIs* like **OpenGL** and **SFML**.
+Included are demonstrations of my skills and examples of my abilities to *problem solve* and implement solutions to self-assigned tasks including creating frameworks, tools, and using C $\negthinspace ^+$ $\negthickspace ^+$ *APIs* like **OpenGL** and **SFML**.
 
 The following programs have been incorporated into a single application for ease of access and demonstration.
 
