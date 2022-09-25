@@ -19,7 +19,7 @@ int * tmp = &today.m;
 int * typ = &today.y;
 int * thp = &today.hour;
 int * tminp = &today.minute;
-int * twp = &bgtoday.dotw;
+int * twp = today.dotw;
 string * TWP = &today.DOTW;
 string * TMP = &today.month;
 
