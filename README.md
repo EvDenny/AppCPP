@@ -197,5 +197,3 @@ If any incorrect letter input and isn't a duplicate of vector<char> wrong[index]
 ###### DEBUGGING
 
 // PrintAns() --> This function is purposefully commented out of the Mainloop but is included nonetheless. This is for debugging purposes. It displays the 'answer' vector and the 'right' vector (with a divider between them) to the guesser to make sure the program is running correctly.
-
-$${{{{\underset{{\LARGE\boxed{\ulcorner~~~\color{yellow}{\tt_{Front~End~Development~INCOMPLETE}}~~~\urcorner}}}{\boxed{\ulcorner_{\LARGE \tt \color{blue}{~~~ }{Lead{~}Developer}{~~~~}}\urcorner}}}~~\boxed\checkmark~\tt \large E{_D^J}}}}$$
