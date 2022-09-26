@@ -2,7 +2,7 @@
 
 [![CodeFactor](https://www.codefactor.io/repository/github/evdenny/appcpp/badge/master)](https://www.codefactor.io/repository/github/evdenny/appcpp/overview/master) [![CodeQL](https://github.com/EvDenny/AppCPP/actions/workflows/codeql.yml/badge.svg)](https://github.com/EvDenny/AppCPP/actions/workflows/codeql.yml) [![Windows](https://svgshare.com/i/ZhY.svg)](https://svgshare.com/i/ZhY.svg) [![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg) [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
 
-[![GitHub commits](https://badgen.net/github/commits/EvDenny/AppCPP)](https://GitHub.com/EvDenny/AppCPP/commit/) [![GitHub latest commit](https://badgen.net/github/last-commit/EvDenny/AppCPP)](https://GitHub.com/EvDenny/AppCPP/commit/) [![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/issues/) ![EvDenny status](https://badge.stateful.com/EvDenny/status.svg) ![status](https://badge.stateful.com/EvDenny/dnd.svg)
+[![GitHub commits](https://badgen.net/github/commits/EvDenny/AppCPP)](https://GitHub.com/EvDenny/AppCPP/commit/) [![GitHub latest commit](https://badgen.net/github/last-commit/EvDenny/AppCPP)](https://GitHub.com/EvDenny/AppCPP/commit/) [![GitHub issues](https://img.shields.io/github/issues/EvDenny/AppCPP.svg)](https://GitHub.com/EvDenny/AppCPP/issues/) ![EvDenny status](https://badge.stateful.com/EvDenny/status.svg) ![status](https://badge.stateful.com/EvDenny/dnd.svg)
 
 [![Evan's top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=EvDenny&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
@@ -197,5 +197,3 @@ If any incorrect letter input and isn't a duplicate of vector<char> wrong[index]
 ###### DEBUGGING
 
 // PrintAns() --> This function is purposefully commented out of the Mainloop but is included nonetheless. This is for debugging purposes. It displays the 'answer' vector and the 'right' vector (with a divider between them) to the guesser to make sure the program is running correctly.
-
-$${{{{\underset{{\LARGE\boxed{\ulcorner~~~\color{yellow}{\tt_{Front~End~Development~INCOMPLETE}}~~~\urcorner}}}{\boxed{\ulcorner_{\LARGE \tt \color{blue}{~~~ }{Lead{~}Developer}{~~~~}}\urcorner}}}~~\boxed\checkmark~\tt \large E{_D^J}}}}$$
