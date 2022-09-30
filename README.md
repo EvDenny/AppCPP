@@ -1,4 +1,4 @@
-# $![picture](images/cpp.sprite.png) $\textcolor{#4a49af}{\tt ^{APPLICATION}}$
+# ![picture](images/cpp.sprite.png)   $\textcolor{#4a49af}{\tt ^{APPLICATION}}$
 
 [![CodeFactor](https://www.codefactor.io/repository/github/evdenny/appcpp/badge/master)](https://www.codefactor.io/repository/github/evdenny/appcpp/overview/master) [![CodeQL](https://github.com/EvDenny/AppCPP/actions/workflows/codeql.yml/badge.svg)](https://github.com/EvDenny/AppCPP/actions/workflows/codeql.yml) [![Windows](https://svgshare.com/i/ZhY.svg)](https://svgshare.com/i/ZhY.svg) [![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg) [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
 
