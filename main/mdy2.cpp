@@ -3,6 +3,8 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
+#include "mdy2.h"
+#include "clear.h"
 using namespace std;
 
 int dd, mm, yyyy, day, month, year, dotw, hour, minute, second;
@@ -34,7 +36,7 @@ class Calendar
     {
     private:
         bool _continue = false;
-        bool finish;
+        bool finish = false;
         int Today;
         int _count;
         bool future = false;
@@ -43,6 +45,8 @@ class Calendar
         Calendar(bool future = false, bool past = false, int _count = 0, int today = dotw, bool finish = false) : _count(_count), Today(today), finish(finish) { this->future = future; this->past = past; this->_continue = _continue; };
         inline bool getFuture() { return future; };
         inline bool getPast() { return past; };
+        inline bool getFinish() { return finish; };
+        inline void setFinish(bool value) { finish = value; };
         inline void setContinue(bool value) { _continue = value; };
         inline string returnDOTW(int value) { string val = weekdays[value]; return val; };
         inline int getDOTW() { return Today; };
@@ -141,13 +145,17 @@ void Calendar::check()
     {
     if (mm == input.mm && input.dd == dd && input.yyyy == yyyy)
         {
-        finish = true;
+        setFinish(true);
         if (past || future)
             {
             cout << "That day is " << _count << " days away!" << endl;
-            cout << "It is a " << returnDOTW(Today) << "!" << endl;
+            if (getFuture()) {
+                cout << "It will be a " << returnDOTW(Today) << "!" << endl;
+            } else if (getPast()) {
+                cout << "It was a " << returnDOTW(Today) << endl;
+            }
             this_thread::sleep_for(chrono::milliseconds(800));
-            finish = true;
+            setFinish(true);
             }
         }
     if (!past && !future)
@@ -241,14 +249,14 @@ void Calendar::mainloopForward()
         {
         nextYear();
         nextMonth();
-        if (!finish)
+        if (!getFinish())
             {
             count();
             check();
             }
         }
-    while (!finish);
-    }
+    while (!getFinish());
+    };
 
 void Calendar::mainloopBackward()
     {
@@ -259,23 +267,10 @@ void Calendar::mainloopBackward()
         count();
         check();
         }
-    while (!finish);
-    }
-
-class CurrentTime
-    {
-    private:
-        int day, month, year, hour, minute, second, dotw;
-    public:
-        CurrentTime()
-            {
-            time_t t = time(0);
-            struct tm* now = localtime(&t);
-            };
+    while (!getFinish());
     };
 
-int main()
-    {
+void CalendarTool() {
     time_t t = time(0);
     struct tm* now = localtime(&t);
     day = now->tm_mday;
@@ -285,20 +280,45 @@ int main()
     minute = now->tm_min;
     second = now->tm_sec;
     dotw = now->tm_wday;
-    dd = day;
-    mm = month;
-    yyyy = year;
-    Calendar cal;
-    cal.currentTime();
-    cal.getInput();
-    cal.check();
-    if (cal.getFuture())
-        {
-        cal.mainloopForward();
-        }
-    else if (cal.getPast())
-        {
-        cal.mainloopBackward();
-        }
-    return 0;
-    }
+    bool done = false;
+    do 
+    {
+        dd = day;
+        mm = month;
+        yyyy = year;
+        Calendar cal;
+        cal.currentTime();
+        cal.getInput();
+        cal.check();
+        if (cal.getFuture())
+            {
+            cal.mainloopForward();
+            }
+        else if (cal.getPast())
+            {
+            cal.mainloopBackward();
+            }
+        this_thread::sleep_for(chrono::milliseconds(800));
+        bool endswitch = false;
+        do {
+            cout << "Press 1 to continue or 2 to use again." << std::endl;
+            int input;
+            cin >> input;
+            switch (input) {
+                case 1:
+                    endswitch = true;
+                    done = true;
+                    break;
+                case 2:
+                    endswitch = true;
+                    done = false;
+                    break;
+                default:
+                    endswitch = false;
+                    cout << "Invalid input. Please try again..." << std::endl;
+                    break;
+                }
+            cls();
+        } while (endswitch = false);
+    } while (!done);
+}

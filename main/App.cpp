@@ -8,7 +8,7 @@
 #include <random>
 #include <limits>
 #include "Sleep.h"
-#include "ArrayTutorial.h"
+#include "mdy2.h"
 #include "menu.h"
 #include "Guess.h"
 #include "hangman.h"
@@ -22,9 +22,9 @@ void mainSUB() {
     if (mainPLAYBool) {
         mainNull;
         Menu::switchGame();
-    } else if (mainTUTORBool) {
+    } else if (mainTOOLSBool) {
         mainNull;
-        Menu::switchTutor();
+        Menu::switchTools();
     } else if (mainEXITBool) {
         Menu::exiting();
     }
@@ -52,26 +52,26 @@ void gameMenus() {
         gameNull;
     }
 }
-void tutorMenus() {
-    if (tutorARRAYBool) {
-        tutorNull;
+void toolsMenus() {
+    if (toolsMDYBool) {
+        toolsNull;
         Menu::starting();
         do {
-            Menu::run(ArrayTutorial);
+            Menu::run(CalendarTool);
             std::cin.clear();
             cls();
-            Menu::switchEndOfTutor();
-        } while (endOfTutorAGAINBool);
-    } else if (tutorEXITBool) {
-        tutorNull;
+            Menu::switchEndOfTools();
+        } while (endOfToolsAGAINBool);
+    } else if (toolsEXITBool) {
+        toolsNull;
     }
 }
 void clearMenuStates() {
     mainNull;
     gameNull;
-    tutorNull;
+    toolsNull;
     endOfGameNull;
-    endOfTutorNull;
+    endOfToolsNull;
 }
 
 int main() {
@@ -81,8 +81,8 @@ int main() {
         Menu::switchMain();
         mainSUB();
         gameMenus();
-        tutorMenus();
-    } while (!(mainEXITBool) || !(gameEXITBool) || !(tutorEXITBool));
+        toolsMenus();
+    } while (!(mainEXITBool) || !(gameEXITBool) || !(toolsEXITBool));
     cls();
     Menu::exiting();
 }

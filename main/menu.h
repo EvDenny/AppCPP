@@ -20,18 +20,18 @@
 #define mainNullBool menuOption == MainMenu::null
 #define mainPLAY menuOption = MainMenu::PLAY_GAMES
 #define mainPLAYBool menuOption == MainMenu::PLAY_GAMES
-#define mainTUTOR menuOption = MainMenu::TUTOR
-#define mainTUTORBool menuOption == MainMenu::TUTOR
+#define mainTOOLS menuOption = MainMenu::TOOLS
+#define mainTOOLSBool menuOption == MainMenu::TOOLS
 #define mainEXIT menuOption = MainMenu::EXIT
 #define mainEXITBool menuOption == MainMenu::EXIT
 
-// TUTORIAL ENUMERATIONS
-#define tutorNull tutorOption = TutorMenu::null
-#define tutorNullBool tutorOption == TutorMenu::null
-#define tutorARRAY tutorOption = TutorMenu::ARRAY
-#define tutorARRAYBool tutorOption == TutorMenu::ARRAY
-#define tutorEXIT tutorOption = TutorMenu::EXIT
-#define tutorEXITBool tutorOption == TutorMenu::EXIT
+// TOOLS ENUMERATIONS
+#define toolsNull toolsOption = ToolsMenu::null
+#define toolsNullBool toolsOption == ToolsMenu::null
+#define toolsMDY toolsOption = ToolsMenu::MDY
+#define toolsMDYBool toolsOption == ToolsMenu::MDY
+#define toolsEXIT toolsOption = ToolsMenu::EXIT
+#define toolsEXITBool toolsOption == ToolsMenu::EXIT
 
 // END OF GAME MENU ENUMERATIONS
 #define endOfGameNull endOfGameOption = endOfGameMenu::null
@@ -43,14 +43,14 @@
 #define endOfGameABORT endOfGameOption = endOfGameMenu::EXIT
 #define endOfGameABORTBool endOfGameOption == endOfGameMenu::EXIT
 
-// END OF TUTORIAL MENU ENUMERATIONS
-#define endOfTutorNull endOfTutorOption = endOfTutorMenu::null
-#define endOfTutorNullBool endOfTutorOption == endOfTutorMenu::null
-#define endOfTutorAGAIN endOfTutorOption = endOfTutorMenu::TUTOR_AGAIN
-#define endOfTutorAGAINBool endOfTutorOption == endOfTutorMenu::TUTOR_AGAIN
-#define endOfTutorEXIT endOfTutorOption = endOfTutorMenu::EXIT_TO_MAIN
-#define endOfTutorEXITBool endOfTutorOption == endOfTutorMenu::EXIT_TO_MAIN
-#define endOfTutorABORT endOfTutorOption = endOfTutorMenu::EXIT
+#define endOfToolsNull endOfToolsOption = endOfToolsMenu::null
+#define endOfToolsNullBool endOfToolsOption == endOfToolsMenu::null
+#define endOfToolsAGAIN endOfToolsOption = endOfToolsMenu::USE_AGAIN
+#define endOfToolsAGAINBool endOfToolsOption == endOfToolsMenu::USE_AGAIN
+#define endOfToolsEXIT endOfToolsOption = endOfToolsMenu::EXIT_TO_MAIN
+#define endOfToolsEXITBool endOfToolsOption == endOfToolsMenu::EXIT_TO_MAIN
+#define endOfToolsABORT endOfToolsOption = endOfToolsMenu::EXIT
+#define endOfToolsABORTBool endOfToolsOption == endOfToolsMenu::EXIT
 #endif // __MENU_OPTIONS__
 
 #pragma once
@@ -61,7 +61,7 @@
 enum class MainMenu {
     null,
     PLAY_GAMES,
-    TUTOR,
+    TOOLS,
     EXIT
 };
 
@@ -79,24 +79,24 @@ enum class endOfGameMenu {
     EXIT
 };
 
-enum class TutorMenu {
+enum class ToolsMenu {
     null,
-    ARRAY,
+    MDY,
     EXIT
 };
 
-enum class endOfTutorMenu {
+enum class endOfToolsMenu {
     null,
-    TUTOR_AGAIN,
+    USE_AGAIN,
     EXIT_TO_MAIN,
     EXIT
 };
 
 MainMenu menuOption = MainMenu::null;
 GameMenu gameOption = GameMenu::null;
-TutorMenu tutorOption = TutorMenu::null;
+ToolsMenu toolsOption = ToolsMenu::null;
 endOfGameMenu endOfGameOption = endOfGameMenu::null;
-endOfTutorMenu endOfTutorOption = endOfTutorMenu::null;
+endOfToolsMenu endOfToolsOption = endOfToolsMenu::null;
 
 #include <iostream>
 #include "Sleep.h"
@@ -113,7 +113,7 @@ public:
         std::cout << "Welcome to " << underline "Evan" reset << " " << underline "Denny" reset << "'s App!" << std::endl;
         std::cout << "Please select an option:" << std::endl;
         std::cout << "1. Play Games" << std::endl;
-        std::cout << "2. Tutorials" << std::endl;
+        std::cout << "2. Tools" << std::endl;
         std::cout << "3. Exit" << std::endl;
         std::cout << "-> ";
     }
@@ -124,12 +124,6 @@ public:
         std::cout << "3. Exit to Main Menu" << std::endl;
         std::cout << "-> ";
     }
-    static void displayTutorMenu() {
-        std::cout << "Please select a tutorial to play:" << std::endl;
-        std::cout << "1. Array Tutorial" << std::endl;
-        std::cout << "2. Exit to Main Menu" << std::endl;
-        std::cout << "-> ";
-    }
     static void displayEndOfGameMenu() {
         std::cout << "Please select an option:" << std::endl;
         std::cout << "1. Play Again" << std::endl;
@@ -137,9 +131,15 @@ public:
         std::cout << "3. Exit" << std::endl;
         std::cout << "-> ";
     }
-    static void displayEndOfTutorMenu() {
+    static void displayToolsMenu() {
+        std::cout << "Please select tool to use:" << std::endl;
+        std::cout << "1. Date Calculator" << std::endl;
+        std::cout << "2. Exit to Main Menu" << std::endl;
+        std::cout << "-> ";
+    }
+    static void displayEndOfToolsMenu() {
         std::cout << "Please select an option:" << std::endl;
-        std::cout << "1. Play Tutorial Again?" << std::endl;
+        std::cout << "1. Use Tool Again" << std::endl;
         std::cout << "2. Exit to Main Menu" << std::endl;
         std::cout << "3. Exit" << std::endl;
         std::cout << "-> ";
@@ -158,7 +158,7 @@ public:
                 mainPLAY;
                 break;
             case 2:
-                mainTUTOR;
+                mainTOOLS;
                 break;
             case 3:
                 exiting();
@@ -168,7 +168,7 @@ public:
                 invalidInput();
                 cls();
                 break;
-        }
+            }
 	    std::cin.clear();
 	    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         } while (mainNullBool);
@@ -194,33 +194,33 @@ public:
                 invalidInput();
                 cls();
                 break;
-        }
+            }
         std::cin.clear();
 	    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         } while (gameNullBool);
         cls();
     }
-    static void switchTutor() {
+    static void switchTools() {
         int input;
         do {
-        displayTutorMenu();
+        displayToolsMenu();
         std::cin >> input;
         switch (input) {
             case 1:
-                tutorARRAY;
+                toolsMDY;
                 break;
             case 2:
-                tutorEXIT;
+                toolsEXIT;
                 break;
             default:
-                tutorNull;
+                toolsNull;
                 invalidInput();
                 cls();
                 break;
-        }
+            }
 	    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::cin.clear();
-        } while (tutorNullBool);
+        } while (toolsNullBool);
         cls();
     }
     static void switchEndOfGame() {
@@ -244,37 +244,38 @@ public:
                 invalidInput();
                 cls();
                 break;
-        }
+            }
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::cin.clear();
         } while (endOfGameNullBool);
         cls();
     }
-    static void switchEndOfTutor() {
+
+    static void switchEndOfTools() {
         int input;
         do {
-        displayEndOfTutorMenu();
+        displayEndOfToolsMenu();
         std::cin >> input;
         switch (input) {
             case 1:
-                endOfTutorAGAIN;
+                endOfToolsAGAIN;
                 break;
             case 2:
-                endOfTutorEXIT;
+                endOfToolsEXIT;
                 break;
             case 3:
-                endOfTutorABORT;
+                endOfToolsABORT;
 		        Menu::exiting();
                 break;
             default:
-                endOfTutorNull;
+                endOfToolsNull;
                 invalidInput();
                 cls();
                 break;
-}
+            }
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::cin.clear();
-        } while (endOfTutorNullBool);
+        } while (endOfToolsNullBool);
         cls();
     }
     static void starting() {
