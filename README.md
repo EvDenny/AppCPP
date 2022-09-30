@@ -38,15 +38,15 @@ The following programs have been incorporated into a single application for ease
 
 ##### Games
 
-- \[x] Guessing Game
-- \[x] Hangman
-- \[ ] Tic-Tac-Toe | Barely Started
+- [x] Guessing Game
+- [x] Hangman
+- [ ] Tic-Tac-Toe | Barely Started
 
 ##### Tools
 
-- \[ ] MDY Calculator | 95% Complete
-- \[ ] Website Parser | Looking into Web Scraping with C++ (Python is perfect for this so it might be an opportunity to use Python in C++ or vice-versa)
-- \[ ] RNG (Random Number Generator) | Already use Mersenne Twister Engine for Guessing Game, woring on making the engine into a tool for customizing the uniform_int_distribution for other forms of distribution and different ranges and types of ranges
+- [x] MDY Calculator | 95% Complete
+- [ ] Website Parser | Looking into Web Scraping with C++ (Python is perfect for this so it might be an opportunity to use Python in C++ or vice-versa)
+- [ ] RNG (Random Number Generator) | Already use Mersenne Twister Engine for Guessing Game, woring on making the engine into a tool for customizing the uniform_int_distribution for other forms of distribution and different ranges and types of ranges
 - [ ] File manipulation (Creationo, Reading, Writing) | Still learning fstream
 
 ## *Games* Section:
@@ -197,3 +197,11 @@ If any incorrect letter input and isn't a duplicate of vector<char> wrong[index]
 ###### DEBUGGING
 
 // PrintAns() --> This function is purposefully commented out of the Mainloop but is included nonetheless. This is for debugging purposes. It displays the 'answer' vector and the 'right' vector (with a divider between them) to the guesser to make sure the program is running correctly.
+
+## Tools Section
+
+### Date Calculator (mdy)
+
+A tool that counts how many days away any given date is accurate to the day of the week. By tracking each day of the week alongside the count to the date, the program also displays the day of the week (like your birthday) is on. Test yours to see if it's accurate compared to another program on the internet.
+
+There are still tests to perform regarding the accuracy of the program due to the nature of the Gregorian calendar. I believe there are also leap centuries (that I don't account for) as well as leap years (of which I account for). Due to the Church wanting Easter Sunday to be on Sunday, and knowing about the nature of days being not exactly 24 hours and years not being exactly 365.25 days long, when the Gregorian calendar was introduced around the world, 11 days were skipped at different times in different nations. For example, George Washington's birthday was considered to be on February 11/22, because based on if you're using the Julian/Gregorian calendar, he was born on a different day in February.
