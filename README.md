@@ -1,18 +1,10 @@
-# ![picture](images/cpp.sprite.png)   $\textcolor{#4a49af}{\tt ^{APPLICATION}}$
+# ![picture](images/cpp.sprite.png)   ![picture](images/app.png)
 
 [![CodeFactor](https://www.codefactor.io/repository/github/evdenny/appcpp/badge/master)](https://www.codefactor.io/repository/github/evdenny/appcpp/overview/master) [![CodeQL](https://github.com/EvDenny/AppCPP/actions/workflows/codeql.yml/badge.svg)](https://github.com/EvDenny/AppCPP/actions/workflows/codeql.yml) [![Windows](https://svgshare.com/i/ZhY.svg)](https://svgshare.com/i/ZhY.svg) [![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg) [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
 
 [![GitHub commits](https://badgen.net/github/commits/EvDenny/AppCPP)](https://GitHub.com/EvDenny/AppCPP/commit/) [![GitHub latest commit](https://badgen.net/github/last-commit/EvDenny/AppCPP)](https://GitHub.com/EvDenny/AppCPP/commit/) [![GitHub issues](https://img.shields.io/github/issues/EvDenny/AppCPP.svg)](https://GitHub.com/EvDenny/AppCPP/issues/) ![EvDenny status](https://badge.stateful.com/EvDenny/status.svg) ![status](https://badge.stateful.com/EvDenny/dnd.svg)
 
 [![Evan's top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=EvDenny&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
-
-$$\tt CURRENT~VERSION:$$
-
-$$\underline{\LARGE{~0.5.1\_{\normalsize / 1 7}}}\small{.branch(galaxy)}_{\tt \tiny STABLE}$$ 
-
-$$\colorbox{#350999}{\tt \color{#FFFFFF}{\large Contributers}}\brack{\tt Evan~Denny}$$ 
-
-$$\tt Last~~Updated~~On~~ \underline {9/20/2022} $$
 
 # Latest Changes
 
