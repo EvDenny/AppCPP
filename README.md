@@ -6,13 +6,13 @@
 
 [![Evan's top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=EvDenny&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
-$$\LARGE \tt CURRENT~VERSION:$$
+$$\tt CURRENT~VERSION:$$
 
-$$\LARGE \underline{\LARGE{~0.5.1\_{\normalsize / 1 7}}}\small{.branch(galaxy)}_{\tt \tiny STABLE}$$ 
+$$\underline{\LARGE{~0.5.1\_{\normalsize / 1 7}}}\small{.branch(galaxy)}_{\tt \tiny STABLE}$$ 
 
-$${\LARGE \colorbox{#350999}{\tt \color{#FFFFFF}{\large Contributers}}\brack{\tt Evan~Denny}}$$ 
+$$\colorbox{#350999}{\tt \color{#FFFFFF}{\large Contributers}}\brack{\tt Evan~Denny}$$ 
 
-$$ \tt Last~~Updated~~~On~~~~ \underline {9/20/2022} $$
+$$\tt Last~~Updated~~On~~ \underline {9/20/2022} $$
 
 # Latest Changes
 
