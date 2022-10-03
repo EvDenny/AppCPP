@@ -7,4 +7,4 @@
 
 void Guessing_Game();
 
-#endif  //!__GUESS__H__
+#endif  // __GUESS__H__

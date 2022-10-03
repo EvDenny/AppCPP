@@ -151,102 +151,102 @@ public:
     static void switchMain() {
         int input;
         do {
-        displayMainMenu();
-        std::cin >> input;
-        switch (input) {
-            case 1:
-                mainPLAY;
-                break;
-            case 2:
-                mainTOOLS;
-                break;
-            case 3:
-                exiting();
-                break;
-            default:
-                mainNull;
-                invalidInput();
-                cls();
-                break;
-            }
-	    std::cin.clear();
-	    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            displayMainMenu();
+            std::cin >> input;
+            switch (input) {
+                case 1:
+                    mainPLAY;
+                    break;
+                case 2:
+                    mainTOOLS;
+                    break;
+                case 3:
+                    exiting();
+                    break;
+                default:
+                    mainNull;
+                    invalidInput();
+                    cls();
+                    break;
+                }
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         } while (mainNullBool);
         cls();
     }
     static void switchGame() {
         int input;
         do {
-        displayGameMenu();
-        std::cin >> input;
-        switch (input) {
-            case 1:
-                gameGUESS;
-                break;
-            case 2:
-                gameHANGMAN;
-                break;
-            case 3:
-                gameEXIT;
-                break;
-            default:
-                gameNull;
-                invalidInput();
-                cls();
-                break;
-            }
-        std::cin.clear();
-	    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            displayGameMenu();
+            std::cin >> input;
+            switch (input) {
+                case 1:
+                    gameGUESS;
+                    break;
+                case 2:
+                    gameHANGMAN;
+                    break;
+                case 3:
+                    gameEXIT;
+                    break;
+                default:
+                    gameNull;
+                    invalidInput();
+                    cls();
+                    break;
+                }
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         } while (gameNullBool);
         cls();
     }
     static void switchTools() {
         int input;
         do {
-        displayToolsMenu();
-        std::cin >> input;
-        switch (input) {
-            case 1:
-                toolsMDY;
-                break;
-            case 2:
-                toolsEXIT;
-                break;
-            default:
-                toolsNull;
-                invalidInput();
-                cls();
-                break;
-            }
-	    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cin.clear();
+            displayToolsMenu();
+            std::cin >> input;
+            switch (input) {
+                case 1:
+                    toolsMDY;
+                    break;
+                case 2:
+                    toolsEXIT;
+                    break;
+                default:
+                    toolsNull;
+                    invalidInput();
+                    cls();
+                    break;
+                }
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         } while (toolsNullBool);
         cls();
     }
     static void switchEndOfGame() {
         int input;
         do {
-        displayEndOfGameMenu();
-        std::cin >> input;
-        switch (input) {
-            case 1:
-                endOfGamePLAYAGAIN;
-                break;
-            case 2:
-                endOfGameEXIT;
-                break;
-            case 3:
-                cls();
-                Menu::exiting();
-                break;
-            default:
-                endOfGameNull;
-                invalidInput();
-                cls();
-                break;
-            }
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cin.clear();
+            displayEndOfGameMenu();
+            std::cin >> input;
+            switch (input) {
+                case 1:
+                    endOfGamePLAYAGAIN;
+                    break;
+                case 2:
+                    endOfGameEXIT;
+                    break;
+                case 3:
+                    cls();
+                    Menu::exiting();
+                    break;
+                default:
+                    endOfGameNull;
+                    invalidInput();
+                    cls();
+                    break;
+                }
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         } while (endOfGameNullBool);
         cls();
     }
@@ -254,27 +254,27 @@ public:
     static void switchEndOfTools() {
         int input;
         do {
-        displayEndOfToolsMenu();
-        std::cin >> input;
-        switch (input) {
-            case 1:
-                endOfToolsAGAIN;
-                break;
-            case 2:
-                endOfToolsEXIT;
-                break;
-            case 3:
-                endOfToolsABORT;
-		        Menu::exiting();
-                break;
-            default:
-                endOfToolsNull;
-                invalidInput();
-                cls();
-                break;
-            }
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cin.clear();
+            displayEndOfToolsMenu();
+            std::cin >> input;
+            switch (input) {
+                case 1:
+                    endOfToolsAGAIN;
+                    break;
+                case 2:
+                    endOfToolsEXIT;
+                    break;
+                case 3:
+                    endOfToolsABORT;
+                    Menu::exiting();
+                    break;
+                default:
+                    endOfToolsNull;
+                    invalidInput();
+                    cls();
+                    break;
+                }
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         } while (endOfToolsNullBool);
         cls();
     }

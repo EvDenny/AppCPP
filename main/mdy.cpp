@@ -3,7 +3,7 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
-#include "mdy2.h"
+#include "mdy.h"
 #include "clear.h"
 using namespace std;
 
@@ -227,7 +227,7 @@ void Calendar::getInput()
     int _yyyy, _mm, _dd;
     input.yyyy = Calendar::Input(_yyyy, "Enter a year (e.g. 2022):", 12000, -10000);
     input.mm = Calendar::Input(_mm, "Enter a month:", 12, 1);
-    input.dd = Input(_dd, "Enter a day:", monthDays[_mm], 1, monthDays[0], leapDay(_mm, _yyyy));
+    input.dd = Input(_dd, "Enter a day:", monthDays[input.mm], 1, monthDays[0], leapDay(input.mm, input.yyyy));
     };
 
 void Calendar::handleInput(int INPUT, int max, int min)

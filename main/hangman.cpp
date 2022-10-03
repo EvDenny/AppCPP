@@ -30,9 +30,7 @@ std::vector<char> charsLower;
 std::string phrase;
 std::string hint;
 
-char symbols[] = {' ', '/', '?', ',', '.', '(', ')', '!', '@', '#', '$', '%', '^', '&', '*', '-', '+', '=', '\''};
-
-const char symbols2[] = {' ', '/', '?', ',', '.', '(', ')', '!', '@', '#', '$', '%', '^', '&', '*', '-', '+', '=', '\''};
+std::vector<char> Symbols = {' ', '/', '?', ',', '.', '(', ')', '!', '@', '#', '$', '%', '^', '&', '*', '-', '+', '=', '\''};
 
 
 void HANGMAN::printHint() {
@@ -117,13 +115,13 @@ void HANGMAN::checkWin() {
         win = true;
     }
 }
-void HANGMAN::printLines2() {
+void HANGMAN::printLines() {
     for (int i = 0; i < charsLower.size(); i++) {
         if (!isInVector(right, charsLower[i])) {
             bool boolean = false;
             for (int g = 0; g < 19; g++) {
-                if (charsLower[i] == symbols2[g]) {
-                    std::cout << symbols2[g] << " ";
+                if (charsLower[i] == Symbols[g]) {
+                    std::cout << Symbols[g] << " ";
                     boolean = true;
                 }
             }
@@ -145,7 +143,7 @@ void HANGMAN::getInput() {
     std::cout << "Guess a letter: ";
     std::cin.clear();
     std::cin >> letter;
-    if (letter == '1' || letter == '2' || letter == '3' || letter == '4' || letter == '5' || letter == '6' || letter == '7' || letter == '8' || letter == '9' || letter == '0' || letter == '!' || letter =='?' || letter == '+' || letter == '-' || letter == '_' || letter == '#' || letter == '&' || letter == '*' || letter == '=' || letter == '.' || letter == ',' || letter == '\'' || letter == '"' || letter == '(' || letter == ')') {
+    if (isInVector(Symbols, letter)) {
         std::cout << "Invalid input" << std::endl;
         Sleep::seconds(1);
         cls();
@@ -159,13 +157,11 @@ void HANGMAN::getInput() {
         } else if (win == true) {
             cls();
             printHangman();
-            printWrong();
-            printLines2();
+            printLines();
             std::cout << "You win!" << std::endl;
-            Sleep::milliseconds(500);
+            Sleep::milliseconds(350);
             std::cout << "You had " << tries << " lives left." << std::endl;
             std::cout << "The word or phrase was: " << phrase << std::endl;
-            Sleep::seconds(2);
             std::cout << "Press ENTER to exit...";
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -190,7 +186,7 @@ void HANGMAN::redraw() {
     cls();
     printHangman();
     printWrong();
-    printLines2();
+    printLines();
     //printAns();//For Debugging
     printHint();
     getInput();
@@ -226,12 +222,12 @@ void HANGMAN::game() {
     bool gameOVER = false;
     do {
     cls();
-    std::cout << "  HANGMAN   " << std::endl;
-    std::cout << "  --------  " << std::endl;
-    std::cout << "  1. Play   " << std::endl;
-    std::cout << "  2. Exit   " << std::endl;
-    std::cout << "  --------  " << std::endl;
-    std::cout << "> ";
+    std::cout << " | HANGMAN | " << std::endl;
+    std::cout << "-| ------- |-" << std::endl;
+    std::cout << " | 1. Play | " << std::endl;
+    std::cout << " | 2. Exit | " << std::endl;
+    std::cout << "-| ------- |-" << std::endl;
+    std::cout << " |         | ->";
     std::string selection;
     std::cin.clear();
     getline(std::cin, selection);

@@ -8,7 +8,7 @@
 #include <random>
 #include <limits>
 #include "Sleep.h"
-#include "mdy2.h"
+#include "mdy.h"
 #include "menu.h"
 #include "Guess.h"
 #include "hangman.h"
@@ -18,6 +18,10 @@
 #define reset "\033[0m"
 
 //UPDATED 0.5.1_12
+void clearInput() {
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+}
 void mainSUB() {
     if (mainPLAYBool) {
         mainNull;
@@ -65,6 +69,7 @@ void toolsMenus() {
     } else if (toolsEXITBool) {
         toolsNull;
     }
+
 }
 void clearMenuStates() {
     mainNull;

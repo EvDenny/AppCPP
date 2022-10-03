@@ -11,7 +11,7 @@ public:
 	static void printWrong();
 	static void check();
 	static void checkWin();
-	static void printLines2();
+	static void printLines();
 	static void getInput();
 	static void redraw();
 	static void play();

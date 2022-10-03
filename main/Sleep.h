@@ -1,5 +1,5 @@
-#ifndef _Sleep_h
-#define _Sleep_h
+#ifndef __SLEEP_H__
+#define __SLEEP_H__
 
 #pragma once
 
@@ -20,4 +20,4 @@ public:
     }
 };
 
-#endif
+#endif // __SLEEP_H__
