@@ -1,71 +1,12 @@
-#ifndef _hang_h
-#define _hang_h
+#ifndef __HANG_H__
+#define __HANG_H__
 
-#pragma once
+void draw6();
+void draw5();
+void draw4();
+void draw3();
+void draw2();
+void draw1();
+void draw0();
 
-#include <iostream>
-
-void draw6() {
-    std::cout << "    |----|" << std::endl;
-    std::cout << "         |" << std::endl;
-    std::cout << "         |" << std::endl;
-    std::cout << "         |" << std::endl;
-    std::cout << "         |" << std::endl;
-    std::cout << "_________|" << std::endl;
-}
-
-void draw5() {
-    std::cout << "    |----|" << std::endl;
-    std::cout << "    O    |" << std::endl;
-    std::cout << "         |" << std::endl;
-    std::cout << "         |" << std::endl;
-    std::cout << "         |" << std::endl;
-    std::cout << "_________|" << std::endl;
-}
-
-void draw4() {
-    std::cout << "    |----|" << std::endl;
-    std::cout << "    O    |" << std::endl;
-    std::cout << "    |    |" << std::endl;
-    std::cout << "         |" << std::endl;
-    std::cout << "         |" << std::endl;
-    std::cout << "_________|" << std::endl;
-}
-
-void draw3() {
-    std::cout << "    |----|" << std::endl;
-    std::cout << "    O    |" << std::endl;
-    std::cout << "    |    |" << std::endl;
-    std::cout << "   /     |" << std::endl;
-    std::cout << "         |" << std::endl;
-    std::cout << "_________|" << std::endl;
-}
-
-void draw2() {
-    std::cout << "    |----|" << std::endl;
-    std::cout << "    O    |" << std::endl;
-    std::cout << "    |    |" << std::endl;
-    std::cout << "   / \\   |" << std::endl;
-    std::cout << "         |" << std::endl;
-    std::cout << "_________|" << std::endl;
-}
-
-void draw1() {
-    std::cout << "    |----|" << std::endl;
-    std::cout << "    O    |" << std::endl;
-    std::cout << "    |\\   |" << std::endl;
-    std::cout << "   / \\   |" << std::endl;
-    std::cout << "         |" << std::endl;
-    std::cout << "_________|" << std::endl;
-}
-
-void draw0() {
-    std::cout << "    |----|" << std::endl;
-    std::cout << "    O    |" << std::endl;
-    std::cout << "   /|\\   |" << std::endl;
-    std::cout << "   / \\   |" << std::endl;
-    std::cout << "         |" << std::endl;
-    std::cout << "_________|" << std::endl;
-}
-
-#endif /* _hang_h */
+#endif /* __HANG_H__ */

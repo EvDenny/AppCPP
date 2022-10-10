@@ -3,9 +3,10 @@
 #include <numeric>
 #include <limits>
 #include "rng.hpp"
+#include "../random.h"
 using namespace std;
 
-void Random::displayMenu()
+void Rng::displayMenu()
     {
     cout << "             RANDOM NUMBER GENERATOR              " << endl;
     cout << "Select a range to generate a random number within:" << endl;
@@ -13,44 +14,31 @@ void Random::displayMenu()
     cout << "              (5) EXIT TO MAIN MENU               " << endl;
     }
 
-void Random::switchRange(Random Object, int input)
+void Rng::switchRange(Random Object, int input)
     {
-    int in;
+    int in, output;
     std::cout << "Enter an input: ";
-std:cin >> in;
+    std:cin >> in;
     switch (in)
         {
         case 1:
-            std::cout << "Random number between 1 and 10: " << Object(1, 10) << endl;
+            output = Object(1,10);
             break;
         case 2:
-            std::cout << "Random number between 1 and 100: " << Object(1, 100) << endl;
+            output = Object(1,100);
             break;
         case 3:
-            std::cout << "Random number between 1 and 1000: " << Object(1, 1000) << endl;
+            output = Object(1,1000);
             break;
         case 4:
-            int output;
-            do
-                {
-                std::cout << "Enter a lower bound: ";
-                std::cin >> a;
-                while (isdigit(a))
-                    {
-                    std::cout << "Enter an upper bound: ";
-                    std::cin >> b;
-                    if (isdigit(b))
-                        {
-                        output = Object(a, b);
-                        std::cout << "Random number between " << a << " and " << b << ": " << output << endl;
-                        }
-                    }
-                }
-            while (isdigit(a) && isdigit(b));
-                break;
+            std::cout << "Enter a lower bound: ";
+            std::cin >> a;
+            std::cout << "Enter an upper bound: ";
+            std::cin >> b;
+            output = Object(a, b);
+            break;
         case 5:
-            running = false;
-            exit = true;
+            setRun(true);
             break;
         default:
             cout << "Invalid input. Please try again." << endl;
@@ -58,21 +46,22 @@ std:cin >> in;
             std::cin.ignore(numeric_limits<streamsize>::max(), '\n');
             break;
         }
+    setOutput(output);
     std::cin.clear();
     }
 
-void Random::setInput(int userInput)
+void Rng::setInput(int userInput)
     {
-    Random::input = userInput;
+    Rng::input = userInput;
     }
 
-int Random::getInput()
+int Rng::getInput()
     {
-    std::cin >> Random::input;
-    return Random::input;
+    std::cin >> Rng::input;
+    return Rng::input;
     }
 
-void Random::boolRunning()
+void Rng::boolRunning()
     {
     if (running == true)
         {
@@ -84,10 +73,18 @@ void Random::boolRunning()
         }
     }
 
+void Rng::setOutput(int output) {
+    Rng::OUTPUT = output;
+}
 
-int main()
-    {
-    Random object;
-    Random(object).switchRange(object, Random(object).getInput());
-    return 0;
-    }
+void Rng::displayOutput() {
+    cout << "  Output: " << Rng::OUTPUT << endl;
+}
+
+void Rng::setRun(bool ean) {
+    Rng::running = ean;
+}
+
+bool Rng::getRun() {
+    return Rng::running;
+}

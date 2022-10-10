@@ -43,6 +43,7 @@
 #define endOfGameABORT endOfGameOption = endOfGameMenu::EXIT
 #define endOfGameABORTBool endOfGameOption == endOfGameMenu::EXIT
 
+// END OF TOOLS MENU ENUMERATIONS
 #define endOfToolsNull endOfToolsOption = endOfToolsMenu::null
 #define endOfToolsNullBool endOfToolsOption == endOfToolsMenu::null
 #define endOfToolsAGAIN endOfToolsOption = endOfToolsMenu::USE_AGAIN
@@ -57,6 +58,11 @@
 
 #define underline "\033[4m"
 #define reset "\033[0m"
+
+void clearInput() {
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+}
 
 enum class MainMenu {
     null,
@@ -106,6 +112,23 @@ std::string invalid = "Invalid input, please try again";
 
 class Menu {
 public:
+    static void start_ending(int value) {
+        switch (value) {
+            case 0:
+                std::cout << "Starting program..." << std::endl;
+                std::this_thread::sleep_for(std::chrono::milliseconds(400));
+                std::cout << "Loaded." << std::endl;
+                cls();
+                break;
+            case 1:
+                std::cout << "EXITING..." << std::endl;
+                std::this_thread::sleep_for(std::chrono::milliseconds(400));
+                std::cout << "Goodbye!" << std::endl;
+                cls();
+                exit(0);
+                break;
+        }
+    }
     static void run(void program()) {
         program();
     }
@@ -161,7 +184,7 @@ public:
                     mainTOOLS;
                     break;
                 case 3:
-                    exiting();
+                    start_ending(1);
                     break;
                 default:
                     mainNull;
@@ -169,8 +192,7 @@ public:
                     cls();
                     break;
                 }
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            clearInput();
         } while (mainNullBool);
         cls();
     }
@@ -195,8 +217,7 @@ public:
                     cls();
                     break;
                 }
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            clearInput();
         } while (gameNullBool);
         cls();
     }
@@ -218,8 +239,7 @@ public:
                     cls();
                     break;
                 }
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            clearInput();
         } while (toolsNullBool);
         cls();
     }
@@ -237,7 +257,7 @@ public:
                     break;
                 case 3:
                     cls();
-                    Menu::exiting();
+                    Menu::start_ending(1);
                     break;
                 default:
                     endOfGameNull;
@@ -245,8 +265,7 @@ public:
                     cls();
                     break;
                 }
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            clearInput();
         } while (endOfGameNullBool);
         cls();
     }
@@ -265,7 +284,7 @@ public:
                     break;
                 case 3:
                     endOfToolsABORT;
-                    Menu::exiting();
+                    Menu::start_ending(1);
                     break;
                 default:
                     endOfToolsNull;
@@ -273,25 +292,9 @@ public:
                     cls();
                     break;
                 }
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            clearInput();
         } while (endOfToolsNullBool);
         cls();
-    }
-    static void starting() {
-        std::cout << "Starting Program..." << std::endl;
-        Sleep::milliseconds(600);
-        std::cout << "LOADED." << std::endl;
-        Sleep::milliseconds(350);
-        cls();
-    }
-    static void exiting() {
-        std::cout << "Exiting..." << std::endl;
-        Sleep::milliseconds(500);
-        std::cout << "Goodbye!" << std::endl;
-        Sleep::seconds(1);
-        cls();
-        exit(0);
     }
 };
 

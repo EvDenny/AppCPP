@@ -1,0 +1,236 @@
+{
+    "$schema": "https://json.schemastore.org/coffeelint",
+    "line_endings": {
+        "value": "windows"
+    },
+    "braces_spacing": {
+        "empty_object_spaces": 1
+    },
+    "eol_last": {
+        "level": "warn"
+    },
+    "indentation": {
+        "value": 2
+    },
+    "TICTACTOE": [
+        -2,
+        {
+            "AUTHOR": "EVAN DENNY"
+        },
+        -1,
+        {
+            "Starting Ranges (Integers)": [
+                0,
+                {
+                    "Configuration": "Initial",
+                    "data": "int",
+                    "type": "Default",
+                    "1": [
+                        0.11,
+                        {
+                            "LOWER": 1,
+                            "UPPER": 10
+                        },
+                        0.12,
+                        {
+                            "Range": "1-10"
+                        }
+                    ],
+                    "2": [
+                        0.21,
+                        {
+                            "LOWER": 1,
+                            "UPPDER": 100
+                        },
+                        0.22,
+                        {
+                            "Range": "1-100"
+                        }
+                    ],
+                    "3": [
+                        0.31,
+                        {
+                            "LOWER": 1,
+                            "UPPDER": 1000
+                        },
+                        0.32,
+                        {
+                            "Range": "1-1000"
+                        }
+                    ]
+                },
+                0.01,
+                {
+                    "Modifiable": false
+                }
+            ],
+            "User Defined Ranges (Integers)": [
+                1,
+                {
+                    "Configuration": "Appended",
+                    "data": "int",
+                    "type": "User",
+                    "1": [
+                        1.11,
+                        {
+                            "LOWER": 1,
+                            "UPPER": 10
+                        },
+                        1.12,
+                        {
+                            "Range": "1-10"
+                        }
+                    ],
+                    "2": [
+                        1.21,
+                        {
+                            "LOWER": 1,
+                            "UPPDER": 100
+                        },
+                        1.22,
+                        {
+                            "Range": "1-100"
+                        }
+                    ],
+                    "3": [
+                        1.31,
+                        {
+                            "LOWER": 1,
+                            "UPPDER": 1000
+                        },
+                        1.32,
+                        {
+                            "Range": "1-1000"
+                        }
+                    ]
+                },
+                1.01,
+                {
+                    "Modifiable": true
+                }
+            ],
+            "Starting Ranges (Doubles)": [
+                2,
+                {
+                    "Configuration": "Initial",
+                    "data": "double",
+                    "type": "Default",
+                    "1": [
+                        2.11,
+                        {
+                            "LOWER": 0.0,
+                            "UPPER": 1.0
+                        },
+                        2.12,
+                        {
+                            "Range": "0.0-1.0"
+                        }
+                    ],
+                    "2": [
+                        2.21,
+                        {
+                            "LOWER": 0.0,
+                            "UPPDER": 10.0
+                        },
+                        2.22,
+                        {
+                            "Range": "0.0-10.0"
+                        }
+                    ],
+                    "3": [
+                        2.31,
+                        {
+                            "LOWER": 0.0,
+                            "UPPDER": 100.0
+                        },
+                        2.32,
+                        {
+                            "Range": "0.0-100.0"
+                        }
+                    ]
+                },
+                2.01,
+                {
+                    "Modifiable": false
+                }
+            ],
+            "User Defined Ranges (Doubles)": [
+                3,
+                {
+                    "Configuration": "Appended",
+                    "data": "double",
+                    "type": "User",
+                    "1": [
+                        3.11,
+                        {
+                            "LOWER": 0.0,
+                            "UPPER": 1.0
+                        },
+                        3.12,
+                        {
+                            "Range": "0.0-1.0"
+                        }
+                    ],
+                    "2": [
+                        3.21,
+                        {
+                            "LOWER": 0.0,
+                            "UPPDER": 10.0
+                        },
+                        3.22,
+                        {
+                            "Range": "0.0-10.0"
+                        }
+                    ],
+                    "3": [
+                        3.31,
+                        {
+                            "LOWER": 0.0,
+                            "UPPDER": 100.0
+                        },
+                        3.32,
+                        {
+                            "Range": "0.0-100.0"
+                        }
+                    ]
+                },
+                3.01,
+                {
+                    "Modifiable": true
+                }
+            ],
+            "Commands": [
+                {
+                    "description": "Commands for modifying this file",
+                    "onExit": "Save File as Current",
+                    "changeRange": [
+                        {
+                            "prompt": "Select Range to modify (1, 2, or 3)",
+                            "range": "",
+                            "onGoodSelection": "Enter a lower bound: ",
+                            "lowerbound": "",
+                            "onGoodSelection2": "Enter an upper bound: ",
+                            "upperbound": "",
+                            "onBadSelection": "Invalid Selection.",
+                            "onSuccess": [
+                                {
+                                    "newRange": true,
+                                    "saveTo:'User Defined Ranges'": true,
+                                    "args": "[../range] + [../lowerbound] + [../upperbound]"
+                                }
+                            ],
+                            "rangeArgumentFormat": [
+                                {
+                                    "range": "(1) (2) (3)",
+                                    "lowerbound": "(int) or (double) that is less than the upperbound",
+                                    "upperbound": "(int) or (double) that is greater than the lowerbound"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "VERSION": 1.01
+}

@@ -3,17 +3,20 @@
 #include <numeric>
 #include <limits>
 #include "rng.hpp"
+#include "../random.h"
+#include "../../main/clear.h"
 using namespace std;
 
-int main() {
-    bool running = true;
-    bool exit = false;
-    do {
-        Random::displayMenu();
-        cout << "-> ";
-        int input;
-        cin >> input;
-        Random::switchRange(input);
-    } while (running == true);
+Rng RANDOM;
+Random rng;
 
+int main() {
+    do {
+        int input;
+        RANDOM.displayMenu();
+        RANDOM.displayOutput();
+        RANDOM.switchRange(rng, input);
+        cls();
+    } while (!RANDOM.getRun());
+    
 }

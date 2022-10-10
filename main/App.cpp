@@ -18,10 +18,6 @@
 #define reset "\033[0m"
 
 //UPDATED 0.5.1_12
-void clearInput() {
-    std::cin.clear();
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-}
 void mainSUB() {
     if (mainPLAYBool) {
         mainNull;
@@ -30,13 +26,13 @@ void mainSUB() {
         mainNull;
         Menu::switchTools();
     } else if (mainEXITBool) {
-        Menu::exiting();
+        Menu::start_ending(1);
     }
 }
 void gameMenus() {
     if (gameGUESSBool) {
         gameNull;
-        Menu::starting();
+        Menu::start_ending(0);
         do {
             Menu::run(Guessing_Game);
             std::cin.clear();
@@ -45,7 +41,7 @@ void gameMenus() {
         } while (endOfGamePLAYAGAINBool);
     } else if (gameHANGMANBool) {
         gameNull;
-        Menu::starting();
+        Menu::start_ending(0);
         do {
             Menu::run(HANGMAN::game);
             std::cin.clear();
@@ -59,7 +55,7 @@ void gameMenus() {
 void toolsMenus() {
     if (toolsMDYBool) {
         toolsNull;
-        Menu::starting();
+        Menu::start_ending(0);
         do {
             Menu::run(CalendarTool);
             std::cin.clear();
@@ -89,5 +85,5 @@ int main() {
         toolsMenus();
     } while (!(mainEXITBool) || !(gameEXITBool) || !(toolsEXITBool));
     cls();
-    Menu::exiting();
+    Menu::start_ending(1);
 }

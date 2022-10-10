@@ -63,7 +63,8 @@ class Calendar
         int Input(int input, string question, int max, int min, int max2 = 31, bool value = false);
         void handleInput(int INPUT, int max, int min);
         void getInput();
-        void check();
+        void checkInput();
+        void checkFinish();
         void prevMonth();
         void nextMonth();
         void nextYear();
@@ -80,7 +81,7 @@ void Calendar::prevMonth()
         dd = monthDays[mm - 2];
         _count++;
         pToday();
-        check();
+        checkFinish();
         }
     else if (dd == 1 && mm != 1)
         {
@@ -88,7 +89,7 @@ void Calendar::prevMonth()
         dd = monthDays[mm];
         _count++;
         pToday();
-        check();
+        checkFinish();
         };
     }
 
@@ -102,7 +103,7 @@ void Calendar::nextMonth()
             dd = 1;
             _count++;
             fToday();
-            check();
+            checkFinish();
             }
         }
     else if (dd == monthDays[mm] && mm != 12)
@@ -111,7 +112,7 @@ void Calendar::nextMonth()
         dd = 1;
         _count++;
         fToday();
-        check();
+        checkFinish();
         };
     }
 
@@ -124,7 +125,7 @@ void Calendar::prevYear()
         yyyy--;
         _count++;
         pToday();
-        check();
+        checkFinish();
         }
     }
 
@@ -137,11 +138,11 @@ void Calendar::nextYear()
         yyyy++;
         _count++;
         fToday();
-        check();
+        checkFinish();
         };
     }
 
-void Calendar::check()
+void Calendar::checkFinish()
     {
     if (mm == input.mm && input.dd == dd && input.yyyy == yyyy)
         {
@@ -158,48 +159,35 @@ void Calendar::check()
             setFinish(true);
             }
         }
-    if (!past && !future)
-        {
-        if (input.mm >= mm && input.yyyy == yyyy)
-            {
-            if (input.mm == mm && input.dd > dd)
-                {
-                Future();
-                }
-            else if (input.mm == mm && input.dd < dd)
-                {
-                Past();
-                }
-            else
-                {
-                Future();
-                }
-            }
-        else if (input.mm <= mm && input.yyyy == yyyy)
-            {
-            if (input.mm == mm && input.dd > dd)
-                {
-                Future();
-                }
-            else if (input.mm == mm && input.dd < dd)
-                {
-                Past();
-                }
-            else
-                {
-                Past();
-                }
-            }
-        else if (input.yyyy > yyyy)
-            {
+    }
+
+void Calendar::checkInput() {
+    if (input.yyyy != yyyy) {
+        if (input.yyyy > yyyy) {
             Future();
-            }
-        else if (input.yyyy < yyyy)
-            {
+        } else if (input.yyyy < yyyy) {
             Past();
+        }
+    } else if (input.yyyy == yyyy) {
+        if (input.mm != mm) {
+            if (input.mm > mm) {
+                Future();
+            } else if (input.mm < mm) {
+                Past();
+            }
+        } else if (input.mm == mm) {
+            if (input.dd != dd) {
+                if (input.dd > dd) {
+                    Future();
+                } else if (input.dd < dd) {
+                    Past();
+                }
+            } else if (input.dd == dd) {
+                    checkFinish();
+                }
             }
         }
-    };
+    }
 
 int Calendar::Input(int input, string question, int max, int min, int max2, bool value)
     {
@@ -252,7 +240,7 @@ void Calendar::mainloopForward()
         if (!getFinish())
             {
             count();
-            check();
+            checkFinish();
             }
         }
     while (!getFinish());
@@ -265,7 +253,7 @@ void Calendar::mainloopBackward()
         prevYear();
         prevMonth();
         count();
-        check();
+        checkFinish();
         }
     while (!getFinish());
     };
@@ -289,7 +277,7 @@ void CalendarTool() {
         Calendar cal;
         cal.currentTime();
         cal.getInput();
-        cal.check();
+        cal.checkInput();
         if (cal.getFuture())
             {
             cal.mainloopForward();

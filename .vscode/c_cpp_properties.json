@@ -10,11 +10,36 @@
                 "UNICODE",
                 "_UNICODE"
             ],
-            "configurationProvider": "${default}",
-            "compilerPath": "${default}",
+            "compilerPath": "C:/cygwin64/bin/g++.exe",
             "intelliSenseMode": "windows-gcc-arm64",
-            "cStandard": "gnu17",
-            "cppStandard": "gnu++20"
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "macFrameworkPath": [],
+            "windowsSdkVersion": "10.0.17763.0",
+            "mergeConfigurations": true,
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/**"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        },
+        {
+            "name": "ARM64",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.17763.0",
+            "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/VC/Tools/MSVC/14.16.27023/bin/Hostx64/x64/cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "windows-gcc-arm64",
+            "compilerArgs": []
         }
     ],
     "version": 4
